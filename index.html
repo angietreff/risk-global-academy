@@ -149,4 +149,1670 @@ header h2{font:500 clamp(32px,5vw,52px) Georgia,serif;line-height:1.06}
 }
 .lesson-header h2{font:500 clamp(31px,5vw,46px) Georgia,serif;line-height:1.08}
 .lesson-section{
-  margin-top:18px;background:white;border:1px solid var(--
+  margin-top:18px;background:white;border:1px solid var(--border);
+  border-radius:var(--radius);padding:27px
+}
+.lesson-section h3{font:500 24px Georgia,serif;margin-bottom:10px}
+.lesson-section p+p{margin-top:13px}
+.lesson-section ul{margin:13px 0 0 20px}
+.lesson-section li+li{margin-top:6px}
+.concept{
+  margin-top:16px;background:var(--sand);border-left:4px solid var(--gold);
+  padding:16px;border-radius:0 12px 12px 0
+}
+.senior{
+  margin-top:18px;background:var(--green);color:white;padding:24px;border-radius:var(--radius)
+}
+.senior h3{font:500 23px Georgia,serif}
+.senior ul{margin:12px 0 0 20px;color:rgba(255,255,255,.78)}
+.senior li+li{margin-top:6px}
+.quiz{
+  margin-top:18px;background:white;border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px
+}
+.quiz h3{font:500 25px Georgia,serif}
+.quiz-question{padding-top:19px;margin-top:19px;border-top:1px solid var(--border)}
+.quiz-question:first-of-type{border-top:0}
+.options{display:grid;gap:8px;margin-top:11px}
+.option{
+  border:1px solid var(--border);background:var(--soft);
+  border-radius:11px;padding:12px;text-align:left
+}
+.option.selected{background:var(--green-soft);border-color:var(--green)}
+.option.correct{background:#dfeee9;border-color:var(--green2)}
+.option.wrong{background:var(--red-soft);border-color:var(--red)}
+.feedback{display:none;margin-top:10px;padding:12px;border-radius:10px;background:var(--soft);color:var(--muted);font-size:13px}
+.feedback.visible{display:block}
+.lab-grid{display:grid;grid-template-columns:1fr .9fr;gap:20px}
+.form-card,.preview-card{
+  background:white;border:1px solid var(--border);border-radius:22px;
+  padding:25px;box-shadow:var(--shadow)
+}
+.form-card h3,.preview-card h3{font:500 25px Georgia,serif}
+.form-section{margin-top:21px;padding-top:21px;border-top:1px solid var(--border)}
+.form-section:first-of-type{border-top:0;padding-top:0}
+.help{font-size:12px;color:var(--muted);margin-top:4px}
+.field{margin-top:13px}
+.field label{display:block;font-size:12px;font-weight:750;margin-bottom:5px}
+.field input,.field textarea,.field select{
+  width:100%;padding:12px;border:1px solid var(--border);
+  border-radius:11px;background:var(--soft);outline:none;color:var(--text)
+}
+.field textarea{min-height:82px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--green);background:white}
+.rating-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.risk-statement{margin-top:17px;padding:18px;border-radius:14px;background:var(--green-soft);line-height:1.7}
+.risk-score{
+  margin-top:15px;padding:15px;border-radius:13px;background:var(--soft);
+  display:flex;align-items:center;justify-content:space-between
+}
+.score-circle{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:var(--green);color:white;font:25px Georgia,serif
+}
+.risk-record{margin-top:10px;background:white;border:1px solid var(--border);border-radius:15px;padding:18px}
+.risk-record-top{display:flex;justify-content:space-between;gap:12px}
+.risk-record h4{font:500 19px Georgia,serif}
+.risk-record p{font-size:13px;color:var(--muted);margin-top:7px}
+.badge{padding:5px 9px;border-radius:999px;background:var(--sand);font-size:11px;font-weight:800;height:max-content}
+.mini-stats{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.mini-stat{font-size:11px;background:var(--soft);padding:6px 8px;border-radius:8px}
+.daily-card{background:var(--sand);border:1px solid #e1d1b5;border-radius:24px;padding:29px}
+.daily-card h3{font:500 30px Georgia,serif}
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.scenario-card{
+  background:white;border:1px solid var(--border);border-radius:18px;
+  padding:22px;display:flex;flex-direction:column
+}
+.scenario-card h3{font:500 22px Georgia,serif}
+.scenario-card p{font-size:13px;color:var(--muted);margin-top:8px}
+.scenario-meta{font-size:11px;color:var(--gold-dark);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.scenario-box{background:white;border:1px solid var(--border);border-radius:22px;padding:28px}
+.scenario-box h3{font:500 28px Georgia,serif}
+.choice-grid{display:grid;gap:9px;margin-top:18px}
+.choice{
+  border:1px solid var(--border);background:var(--soft);border-radius:12px;
+  padding:14px;text-align:left
+}
+.choice:hover{background:var(--green-soft)}
+.partner-answer{display:none;margin-top:18px;padding:20px;background:var(--green);color:white;border-radius:15px}
+.partner-answer.visible{display:block}
+.partner-answer p{margin-top:8px;color:rgba(255,255,255,.78)}
+.empty{padding:35px 20px;text-align:center;background:white;border:1px dashed var(--border);border-radius:var(--radius);color:var(--muted)}
+.toast{
+  position:fixed;right:20px;top:20px;z-index:400;padding:13px 16px;
+  background:var(--dark);color:white;border-radius:12px;opacity:0;
+  transform:translateY(-8px);pointer-events:none;transition:.18s
+}
+.toast.visible{opacity:1;transform:none}
+.mobile-menu,.mobile-close{display:none}
+
+@media(max-width:950px){
+  .app{grid-template-columns:220px 1fr}
+  main{padding:27px}
+  .course-grid{grid-template-columns:1fr 1fr}
+  .grid-2,.lab-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .app{display:block}
+  .sidebar{
+    position:fixed;left:0;top:0;width:min(86vw,310px);z-index:300;
+    transform:translateX(-105%);transition:.2s
+  }
+  .sidebar.open{transform:none}
+  .mobile-close{
+    display:block;position:absolute;right:15px;top:12px;
+    border:0;background:none;color:white;font-size:25px
+  }
+  .mobile-menu{
+    display:grid;place-items:center;position:fixed;right:17px;bottom:17px;z-index:250;
+    width:52px;height:52px;border-radius:50%;border:0;background:var(--dark);color:white
+  }
+  main{padding:20px 15px 85px}
+  .course-grid,.scenario-grid{grid-template-columns:1fr}
+  .lesson{grid-template-columns:43px 1fr}
+  .lesson .btn{grid-column:2;justify-self:start}
+  .rating-grid{grid-template-columns:1fr}
+  .hero{padding:27px 21px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<aside class="sidebar" id="sidebar">
+<button class="mobile-close" id="closeMenu">×</button>
+
+<div class="brand">
+  <div class="logo">A</div>
+  <div>
+    <h1>Atlas Academy</h1>
+    <p>RISK · STRATEGY · GLOBAL AFFAIRS</p>
+  </div>
+</div>
+
+<nav class="nav">
+  <button class="active" data-page="dashboard">⌂ &nbsp; Översikt</button>
+  <button data-page="courses">▤ &nbsp; Kurser</button>
+  <button data-page="daily">◷ &nbsp; 5 minuter</button>
+  <button data-page="risklab">◇ &nbsp; Risk Lab</button>
+  <button data-page="scenarios">◈ &nbsp; Scenario Lab</button>
+  <button data-page="progress">↗ &nbsp; Progression</button>
+</nav>
+
+<div class="sidebar-note">
+  <strong>Nästa lilla steg räcker.</strong>
+  Inga deadlines. Inga streaks att förlora. Kursen är gjord för att fungera bredvid ett fullt liv.
+</div>
+</aside>
+
+<main>
+
+<!-- DASHBOARD -->
+
+<section class="page active" id="dashboard">
+<header>
+  <div class="eyebrow">Executive learning</div>
+  <h2>Atlas Academy</h2>
+  <p class="header-copy">
+    Risk management enligt COSO, internationell politik på universitetsnivå
+    och geopolitisk företagsrisk – i korta, praktiska pass.
+  </p>
+</header>
+
+<div class="hero">
+  <div class="eyebrow" style="color:#d9bd8e">Nästa lektion</div>
+  <h3 id="heroTitle">Vad är risk?</h3>
+  <p id="heroCopy"></p>
+  <div class="actions">
+    <button class="btn btn-primary" id="continueLearning">Fortsätt lära</button>
+    <button class="btn btn-ghost" data-page-link="daily">Jag har bara 5 minuter</button>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="eyebrow">Veckorytm</div>
+    <h3>35–45 minuter räcker</h3>
+    <div class="week">
+      <div class="week-item"><div><strong>Pass 1 · Risk</strong><span>10–12 min kärnlektion</span></div><span>10 min</span></div>
+      <div class="week-item"><div><strong>Pass 2 · Politik</strong><span>Universitetsnivå i små delar</span></div><span>10 min</span></div>
+      <div class="week-item"><div><strong>Pass 3 · Tillämpning</strong><span>Case, Risk Lab eller scenario</span></div><span>15 min</span></div>
+    </div>
+  </div>
+
+  <div class="card progress-card">
+    <div class="eyebrow" style="color:#d9bd8e">Total progression</div>
+    <h3 id="levelName">Foundation</h3>
+    <p class="muted">Varje avslutad lektion räknas.</p>
+    <div class="big-number"><span id="totalPercent">0</span>%</div>
+    <div class="progress-track"><div class="progress-fill" id="totalBar"></div></div>
+  </div>
+</div>
+
+<div class="section-title">
+  <div class="eyebrow">Tre utbildningsspår</div>
+  <h2>Välj vad du vill förstå</h2>
+</div>
+
+<div class="course-grid">
+  <article class="course">
+    <div class="course-icon">⚖</div>
+    <h3>COSO & Risk Management</h3>
+    <p>
+      Från riskens grunder till governance, risk appetite, controls,
+      KRI:er, emerging risk, scenarioanalys och board reporting.
+    </p>
+    <div class="course-footer">
+      <span class="muted" id="riskPct">0%</span>
+      <div class="course-track"><span id="riskBar"></span></div>
+      <button class="btn btn-dark" data-course="risk">Öppna kursen</button>
+    </div>
+  </article>
+
+  <article class="course">
+    <div class="course-icon" style="background:var(--blue)">◎</div>
+    <h3>Internationell politik</h3>
+    <p>
+      Makt, stater, realism, liberalism, konstruktivism, krig, FN,
+      Nato, EU och internationell politisk ekonomi.
+    </p>
+    <div class="course-footer">
+      <span class="muted" id="politicsPct">0%</span>
+      <div class="course-track"><span id="politicsBar"></span></div>
+      <button class="btn btn-dark" data-course="politics">Öppna kursen</button>
+    </div>
+  </article>
+
+  <article class="course">
+    <div class="course-icon" style="background:var(--sand)">🌍</div>
+    <h3>Geopolitisk företagsrisk</h3>
+    <p>
+      Country risk, sanktioner, stormaktsrivalitet, supply chains,
+      teknologi, energi och strategiska scenarier.
+    </p>
+    <div class="course-footer">
+      <span class="muted" id="geoPct">0%</span>
+      <div class="course-track"><span id="geoBar"></span></div>
+      <button class="btn btn-dark" data-course="geo">Öppna kursen</button>
+    </div>
+  </article>
+</div>
+</section>
+
+<!-- COURSES -->
+
+<section class="page" id="courses">
+<header>
+  <div class="eyebrow">Kursbibliotek</div>
+  <h2>Alla lektioner</h2>
+  <p class="header-copy">
+    Du behöver inte gå snabbt. Målet är att kunna använda kunskapen, inte bara känna igen orden.
+  </p>
+</header>
+
+<div class="filters">
+  <button class="filter active" data-filter="all">Alla</button>
+  <button class="filter" data-filter="risk">Risk</button>
+  <button class="filter" data-filter="politics">Politik</button>
+  <button class="filter" data-filter="geo">Geopolitik</button>
+</div>
+
+<div class="lesson-list" id="lessonList"></div>
+</section>
+
+<!-- DAILY -->
+
+<section class="page" id="daily">
+<header>
+  <div class="eyebrow">Microlearning</div>
+  <h2>Jag har fem minuter</h2>
+  <p class="header-copy">Ett begrepp, ett exempel och en kontrollfråga.</p>
+</header>
+
+<div class="daily-card">
+  <div class="eyebrow" id="dailyCategory">Risk Management</div>
+  <h3 id="dailyTitle"></h3>
+  <p id="dailyText" style="margin-top:10px"></p>
+  <div class="concept" id="dailyExample"></div>
+  <div class="actions">
+    <button class="btn btn-primary" id="nextDaily">Nästa begrepp</button>
+  </div>
+</div>
+</section>
+
+<!-- RISK LAB -->
+
+<section class="page" id="risklab">
+<header>
+  <div class="eyebrow">Praktisk risk management</div>
+  <h2>Risk Lab</h2>
+  <p class="header-copy">
+    Formulera en risk, bedöm inherent och residual exposure och bygg ditt eget riskregister.
+  </p>
+</header>
+
+<div class="lab-grid">
+
+<div class="form-card">
+  <div class="eyebrow">Risk assessment</div>
+  <h3>Bygg en risk</h3>
+
+  <div class="form-section">
+    <h4>1. Mål och risk</h4>
+    <div class="field">
+      <label>Risknamn</label>
+      <input id="riskTitle" placeholder="Exempel: Kritisk leverantör">
+    </div>
+    <div class="field">
+      <label>Vilket mål påverkas?</label>
+      <textarea id="objective" placeholder="Exempel: Säkerställa kontinuerlig produktion."></textarea>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h4>2. Riskens anatomi</h4>
+    <div class="field"><label>Orsak</label><textarea id="cause" placeholder="På grund av..."></textarea></div>
+    <div class="field"><label>Riskhändelse</label><textarea id="event" placeholder="finns en risk att..."></textarea></div>
+    <div class="field"><label>Konsekvens</label><textarea id="consequence" placeholder="vilket kan leda till..."></textarea></div>
+  </div>
+
+  <div class="form-section">
+    <h4>3. Inherent risk</h4>
+    <p class="help">Bedöm innan befintliga kontroller beaktas.</p>
+    <div class="rating-grid">
+      <div class="field"><label>Sannolikhet</label><select id="inherentLikelihood"></select></div>
+      <div class="field"><label>Påverkan</label><select id="inherentImpact"></select></div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h4>4. Controls</h4>
+    <div class="field"><label>Befintliga kontroller</label><textarea id="controls" placeholder="Vilka kontroller reducerar exponeringen?"></textarea></div>
+  </div>
+
+  <div class="form-section">
+    <h4>5. Residual risk</h4>
+    <div class="rating-grid">
+      <div class="field"><label>Sannolikhet</label><select id="residualLikelihood"></select></div>
+      <div class="field"><label>Påverkan</label><select id="residualImpact"></select></div>
+    </div>
+    <div class="field"><label>Risk owner</label><input id="riskOwner" placeholder="Exempel: CFO"></div>
+    <div class="field">
+      <label>Risk response</label>
+      <select id="response">
+        <option>Reduce</option>
+        <option>Accept</option>
+        <option>Avoid</option>
+        <option>Share / Transfer</option>
+      </select>
+    </div>
+    <div class="field"><label>Actions</label><textarea id="actions" placeholder="Vilka ytterligare åtgärder behövs?"></textarea></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="saveRisk">Spara risk</button>
+    <button class="btn btn-light" id="clearRisk">Rensa</button>
+  </div>
+</div>
+
+<div>
+  <div class="preview-card">
+    <div class="eyebrow">Live preview</div>
+    <h3>Risk statement</h3>
+    <div class="risk-statement" id="riskStatement"></div>
+
+    <div class="risk-score">
+      <div><strong>Inherent risk</strong><div class="muted">Likelihood × impact</div></div>
+      <div class="score-circle" id="inherentScore">9</div>
+    </div>
+
+    <div class="risk-score">
+      <div><strong>Residual risk</strong><div class="muted">Efter controls</div></div>
+      <div class="score-circle" id="residualScore">6</div>
+    </div>
+
+    <div class="concept" id="riskInsight"></div>
+  </div>
+
+  <div class="preview-card" style="margin-top:17px">
+    <div class="eyebrow">Senior challenge</div>
+    <h3>Frågorna du alltid ska ställa</h3>
+    <div class="muted" style="margin-top:12px">
+      <p>✓ Vilket mål påverkas?</p>
+      <p>✓ Vad driver risken?</p>
+      <p>✓ Vilket scenario oroar oss?</p>
+      <p>✓ Fungerar våra controls faktiskt?</p>
+      <p>✓ Är residual risk inom appetite?</p>
+      <p>✓ Vilket beslut krävs?</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section-title">
+  <div class="eyebrow">Risk register</div>
+  <h2>Dina sparade risker</h2>
+</div>
+<div id="riskRecords"></div>
+</section>
+
+<!-- SCENARIOS -->
+
+<section class="page" id="scenarios">
+<header>
+  <div class="eyebrow">Decision training</div>
+  <h2>Scenario Lab</h2>
+  <p class="header-copy">
+    Träna på att analysera verklighetsnära situationer och jämför sedan ditt beslut med ett seniorperspektiv.
+  </p>
+</header>
+
+<div class="scenario-grid" id="scenarioList"></div>
+</section>
+
+<section class="page" id="scenarioPage">
+<div class="lesson-shell">
+  <button class="btn btn-light" id="backScenarios" style="margin-bottom:17px">← Scenario Lab</button>
+  <div class="scenario-box">
+    <div class="scenario-meta" id="scenarioMeta"></div>
+    <h3 id="scenarioTitle"></h3>
+    <p id="scenarioSituation" style="margin-top:12px;color:var(--muted)"></p>
+    <div class="concept" id="scenarioQuestion"></div>
+    <div class="choice-grid" id="scenarioChoices"></div>
+    <div class="partner-answer" id="partnerAnswer"></div>
+  </div>
+</div>
+</section>
+
+<!-- PROGRESS -->
+
+<section class="page" id="progress">
+<header>
+  <div class="eyebrow">Din utveckling</div>
+  <h2>Progression</h2>
+  <p class="header-copy">Du kan alltid repetera tidigare lektioner och förbättra dina quizresultat.</p>
+</header>
+
+<div class="grid-2">
+  <div class="card">
+    <h3>Genomförda lektioner</h3>
+    <div class="lesson-list" id="completedLessons" style="margin-top:15px"></div>
+  </div>
+
+  <div class="card progress-card">
+    <div class="eyebrow" style="color:#d9bd8e">Total progression</div>
+    <div class="big-number"><span id="progressPercent">0</span>%</div>
+    <div class="progress-track"><div class="progress-fill" id="progressBar"></div></div>
+    <div class="actions">
+      <button class="btn btn-ghost" id="resetProgress">Nollställ progression</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- LESSON PAGE -->
+
+<section class="page" id="lessonPage">
+<div class="lesson-shell">
+
+<button class="btn btn-light" id="backToCourses" style="margin-bottom:17px">← Tillbaka till kurser</button>
+
+<div class="lesson-header">
+  <div class="eyebrow" id="lessonCourse"></div>
+  <h2 id="lessonTitle"></h2>
+  <p class="header-copy" id="lessonIntro"></p>
+  <div class="muted" id="lessonMeta" style="margin-top:13px;font-size:12px"></div>
+</div>
+
+<div id="lessonSections"></div>
+
+<div class="senior">
+  <div class="eyebrow" style="color:#d9bd8e">Senior perspective</div>
+  <h3>Så här tänker en erfaren rådgivare</h3>
+  <ul id="seniorList"></ul>
+</div>
+
+<div class="quiz">
+  <div class="eyebrow">Knowledge check</div>
+  <h3>Testa vad du har förstått</h3>
+  <div id="quizQuestions"></div>
+  <div class="actions">
+    <button class="btn btn-primary" id="submitQuiz">Rätta quiz</button>
+    <button class="btn btn-light" id="restartQuiz">Börja om</button>
+  </div>
+  <div id="quizResult" style="margin-top:15px"></div>
+</div>
+
+<div class="actions">
+  <button class="btn btn-light" id="previousLesson">← Föregående</button>
+  <button class="btn btn-primary" id="nextLesson">Nästa →</button>
+</div>
+
+</div>
+</section>
+
+</main>
+</div>
+
+<button class="mobile-menu" id="openMenu">☰</button>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+/* =========================================================
+   COURSE CONTENT
+========================================================= */
+
+const lessons = [
+
+/* -------------------- RISK -------------------- */
+
+{
+id:"r1",course:"risk",courseName:"COSO & Risk Management",
+title:"1. Vad är risk?",duration:"10 min",level:"Foundation",
+intro:"All risk management börjar med en enkel fråga: vad försöker organisationen uppnå, och vilken osäkerhet kan påverka det?",
+sections:[
+["Risk börjar med ett mål",[
+"Risk existerar inte i ett vakuum. En händelse är relevant som risk därför att den kan påverka ett mål.",
+"Om målet är att växa på en ny marknad blir efterfrågan, reglering, kompetens och execution relevanta osäkerheter."
+],"Risk är osäkerhet som kan påverka möjligheten att nå ett mål."],
+["Risk är framåtblickande",[
+"En incident har redan inträffat. En risk beskriver något som kan inträffa.",
+"Ett dataintrång är därför en incident. Risken kan vara att svag åtkomststyrning leder till framtida obehörig åtkomst."
+]],
+["Risk och värdeskapande",[
+"Organisationer måste ta risk för att skapa värde. Bra risk management handlar därför inte om att eliminera all risk.",
+"Det handlar om att förstå vilken risk som är värd att ta och vilken risk som behöver reduceras."
+]]
+],
+senior:["Vilket mål påverkas?","Vad kan faktiskt inträffa?","Vad driver osäkerheten?","Vilket beslut måste ledningen kunna fatta?"],
+quiz:[
+["Vilket beskriver bäst risk?",["En incident som redan inträffat","Osäkerhet som kan påverka ett mål","En kontroll","En policy"],1,"Risk är osäkerhet i relation till ett mål."],
+["Vad är ett dataintrång som redan skett?",["Risk appetite","Incident","KRI","Inherent risk"],1,"En händelse som redan inträffat är en incident."]
+]},
+
+{
+id:"r2",course:"risk",courseName:"COSO & Risk Management",
+title:"2. Riskens anatomi",duration:"10 min",level:"Foundation",
+intro:"En bra riskformulering gör sambandet mellan orsak, händelse och konsekvens tydligt.",
+sections:[
+["Orsak → riskhändelse → konsekvens",[
+"En användbar formulering är: På grund av X finns en risk att Y inträffar, vilket kan leda till Z.",
+"Det gör risken begriplig och hjälper verksamheten att identifiera rätt controls."
+],"På grund av [orsak] finns en risk att [riskhändelse], vilket kan leda till [konsekvens]."],
+["Vaga risker skapar svaga beslut",[
+"'Cyberrisk' eller 'GDPR-risk' säger nästan ingenting om vilket scenario som behöver hanteras.",
+"Specificera i stället vad som kan inträffa och hur verksamhetens mål påverkas."
+]]
+],
+senior:["Undvik ämnesord som risk statements.","Separera orsak från konsekvens.","Koppla konsekvensen till verksamhetsmål."],
+quiz:[
+["Vilken struktur är bäst?",["Kontroll → mål → incident","Orsak → händelse → konsekvens","Policy → risk → ägare","Konsekvens → budget → kontroll"],1,"Strukturen synliggör den kausala kedjan."]
+]},
+
+{
+id:"r3",course:"risk",courseName:"COSO & Risk Management",
+title:"3. COSO ERM – helheten",duration:"12 min",level:"Foundation",
+intro:"COSO ERM integrerar risk management med strategi, governance och performance.",
+sections:[
+["ERM är inte ett Excel-ark",[
+"Ett riskregister är bara ett verktyg. ERM handlar om hur organisationen fattar beslut under osäkerhet.",
+"Ett moget ERM-system påverkar strategi, resursallokering, performance och governance."
+]],
+["COSO:s fem komponenter",[
+"Governance & Culture skapar fundamentet. Strategy & Objective-Setting integrerar risk med strategi.",
+"Performance omfattar identifiering, bedömning och respons. Review & Revision säkerställer anpassning. Information, Communication & Reporting gör riskinformationen användbar."
+],"Governance & Culture → Strategy & Objective-Setting → Performance → Review & Revision → Information, Communication & Reporting."]
+],
+senior:["Påverkar ERM verkliga beslut?","Äger verksamheten riskerna?","Diskuteras risk innan strategiska beslut fattas?"],
+quiz:[
+["Vilket är mest korrekt?",["ERM är samma sak som riskregistret","ERM integrerar risk med strategi och performance","ERM tillhör bara internrevision","ERM eliminerar risk"],1,"COSO ERM är ett system för integrerad styrning av risk."]
+]},
+
+{
+id:"r4",course:"risk",courseName:"COSO & Risk Management",
+title:"4. Governance & Culture",duration:"12 min",level:"Foundation",
+intro:"Metoder fungerar bara om governance och kultur stödjer rätt beteenden.",
+sections:[
+["Styrelsens roll",[
+"Styrelsen ska ha oversight över de viktigaste riskerna och utmana ledningen kring exponering, appetite och respons.",
+"Styrelsen ska inte detaljstyra varje operativ risk."
+]],
+["Riskkultur",[
+"Riskkultur syns i hur människor beter sig när mål, incitament och risk kolliderar.",
+"En organisation kan ha perfekta policies men ändå en svag kultur om dåliga nyheter filtreras bort."
+],"Tone at the top är viktigt. Tone in the middle avgör ofta vardagsbeteendet."]
+],
+senior:["Vilket beteende belönas?","Vågar människor eskalera?","Har risk owners verkligt mandat?","Skapar incitament oönskat risktagande?"],
+quiz:[
+["Vilket signalerar svag riskkultur?",["Tidiga eskaleringar","Tydliga mandat","Dåliga nyheter filtreras bort","Öppna riskdiskussioner"],2,"Informationsfiltrering gör det svårt för ledningen att agera i tid."]
+]},
+
+{
+id:"r5",course:"risk",courseName:"COSO & Risk Management",
+title:"5. Strategy & Objective-Setting",duration:"11 min",level:"Foundation",
+intro:"Risk ska diskuteras när strategiska alternativ utvärderas, inte bara efter att beslutet redan fattats.",
+sections:[
+["Strategiska antaganden",[
+"Alla strategier bygger på antaganden om kunder, konkurrens, finansiering, reglering, teknik och execution.",
+"Risk management hjälper ledningen att identifiera vilka antaganden som är mest osäkra och mest kritiska."
+]],
+["Mål och risk",[
+"Ju tydligare målet är, desto bättre kan riskerna kopplas till verklig performance.",
+"Riskdiskussionen ska hjälpa ledningen förstå trade-offs mellan möjligheter och exponering."
+]],
+],
+senior:["Vad måste vara sant för att strategin ska lyckas?","Vilket antagande är mest sårbart?","Vilken risk skapas av att inte agera?"],
+quiz:[
+["När bör risk integreras i strategi?",["Efter beslutet","När alternativ utvärderas","Endast efter incident","Endast i årsrapporten"],1,"Risk ska påverka själva beslutsprocessen."]
+]},
+
+{
+id:"r6",course:"risk",courseName:"COSO & Risk Management",
+title:"6. Risk Appetite",duration:"12 min",level:"Practitioner",
+intro:"Risk appetite anger hur mycket risk organisationen är villig att ta i jakten på sina mål.",
+sections:[
+["Aptit varierar mellan risker",[
+"Ett företag kan ha hög appetite för innovation men mycket låg appetite för mutor, säkerhet eller dataläckor.",
+"Det är därför sällan meningsfullt med en enda generell riskaptit."
+]],
+["Från ord till styrning",[
+"Appetite behöver översättas till tolerances, limits och thresholds så att människor vet när de får agera själva och när de måste eskalera."
+],"Risk appetite utan koppling till beslut är bara en formulering på papper."]
+],
+senior:["Syns vår låga appetite i budget och controls?","Vem får acceptera en breach?","Vilken threshold utlöser eskalering?"],
+quiz:[
+["Vad är risk appetite?",["Antal risker","Viljan att ta risk för att nå mål","En kontrolltest","Max antal incidenter"],1,"Appetite handlar om önskad risknivå i relation till värdeskapande."]
+]},
+
+{
+id:"r7",course:"risk",courseName:"COSO & Risk Management",
+title:"7. Inherent och Residual Risk",duration:"10 min",level:"Practitioner",
+intro:"Du måste kunna skilja riskens inneboende exponering från den exponering som återstår efter controls.",
+sections:[
+["Inherent risk",["Inherent risk bedöms innan befintliga controls och mitigations beaktas."]],
+["Residual risk",[
+"Residual risk bedöms efter att controls har beaktats.",
+"Skillnaden mellan inherent och residual risk hjälper dig förstå hur mycket kontrollmiljön faktiskt reducerar."
+],"Hög inherent risk behöver inte vara oacceptabel om residual risk är inom appetite och controls är tillförlitliga."]
+],
+senior:["Har controls verkligen den effekt vi antar?","Är residualbedömningen för optimistisk?","Vem accepterar kvarvarande exponering?"],
+quiz:[
+["Residual risk är...",["Risk före controls","Risk efter controls","Endast reputationsrisk","Risk utan owner"],1,"Residual risk är den kvarvarande exponeringen."]
+]},
+
+{
+id:"r8",course:"risk",courseName:"COSO & Risk Management",
+title:"8. Controls & Control Effectiveness",duration:"12 min",level:"Practitioner",
+intro:"En policy är inte automatiskt en kontroll, och en dokumenterad kontroll är inte automatiskt effektiv.",
+sections:[
+["Control design",[
+"Design effectiveness frågar om kontrollen är rätt utformad för den risk den ska adressera.",
+"En kontroll kan vara preventiv, detektiv eller korrektiv och manuell eller automatiserad."
+]],
+["Operating effectiveness",[
+"Operating effectiveness frågar om kontrollen faktiskt utförs konsekvent och med tillräcklig kvalitet.",
+"Testning kräver evidens, inte bara intervjuer."
+],"Designad rätt + faktiskt utförd = grundförutsättning för en effektiv control."]
+],
+senior:["Vilken risk driver kontrollen ner?","Vilken evidens finns?","Vem utför den?","Är precisionen tillräcklig?"],
+quiz:[
+["Operating effectiveness betyder...",["Att kontrollen finns i en policy","Att kontrollen fungerar i praktiken","Att kontrollen är automatisk","Att den har en owner"],1,"Operating effectiveness handlar om faktisk funktion över tid."]
+]},
+
+{
+id:"r9",course:"risk",courseName:"COSO & Risk Management",
+title:"9. Risk Response",duration:"10 min",level:"Practitioner",
+intro:"Efter bedömningen måste verksamheten välja hur exponeringen ska hanteras.",
+sections:[
+["Fyra vanliga responses",[
+"Reduce: minska sannolikhet eller impact. Accept: behåll exponeringen.",
+"Avoid: avstå från aktiviteten. Share/Transfer: dela risken genom exempelvis försäkring eller avtal."
+]],
+["Proportionerlighet",[
+"Risk management betyder inte maximal kontroll.",
+"Ytterligare mitigation bör ge tillräcklig riskreduktion i relation till kostnad och strategisk påverkan."
+]]
+],
+senior:["Vad kostar mitigation?","Vilken ny risk skapar åtgärden?","Är residual risk acceptabel?"],
+quiz:[
+["Vilken response innebär att verksamheten avstår?",["Reduce","Accept","Avoid","Share"],2,"Avoid innebär att inte genomföra den riskdrivande aktiviteten."]
+]},
+
+{
+id:"r10",course:"risk",courseName:"COSO & Risk Management",
+title:"10. KRI – Key Risk Indicators",duration:"10 min",level:"Practitioner",
+intro:"KRI:er ska hjälpa organisationen upptäcka förändrad exponering innan den blir ett problem.",
+sections:[
+["Ledande och laggande",[
+"Laggande indikatorer visar vad som redan hänt. Ledande indikatorer försöker fånga utvecklingen innan en risk materialiseras.",
+"Exempel: personalomsättning kan vara en ledande indikator för kapacitetsrisk."
+]],
+["Thresholds och triggers",[
+"En KRI blir värdefull när organisationen vet vad som ska hända om indikatorn passerar en viss nivå."
+],"En indikator utan beslutsregel är ofta bara statistik."]
+],
+senior:["Vilken signal kommer tidigast?","Vem agerar vid threshold breach?","Är indikatorn nära den verkliga riskdrivaren?"],
+quiz:[
+["Vad gör en KRI särskilt användbar?",["Snygg visualisering","Threshold + action","Årlig rapportering","Att den alltid är finansiell"],1,"KRI:n måste kopplas till faktisk styrning."]
+]},
+
+{
+id:"r11",course:"risk",courseName:"COSO & Risk Management",
+title:"11. Emerging & Interconnected Risks",duration:"12 min",level:"Advanced",
+intro:"De svåraste riskerna är ofta de som förändras snabbt eller förstärker varandra.",
+sections:[
+["Emerging risk",[
+"Emerging risks är nya eller snabbt föränderliga risker där historisk data ofta är begränsad.",
+"Horizon scanning, weak signals och scenarioanalys blir därför viktiga verktyg."
+]],
+["Interconnections",[
+"Cyber, geopolitik, leverantörskedjor och regulation kan förstärka varandra.",
+"En risklista som behandlar varje risk isolerat kan därför underskatta den verkliga exponeringen."
+]]
+],
+senior:["Vilka risker kan kaskadera?","Vilken common cause kan slå mot flera områden?","Vilka antaganden bygger vi på utan bra data?"],
+quiz:[
+["Varför är interconnected risks svåra?",["De saknar owners","De kan förstärka varandra","De är alltid finansiella","De kan inte analyseras"],1,"Samband kan skapa större total påverkan än varje risk separat."]
+]},
+
+{
+id:"r12",course:"risk",courseName:"COSO & Risk Management",
+title:"12. Board & Executive Risk Reporting",duration:"13 min",level:"Advanced",
+intro:"Senior risk reporting ska hjälpa ledningen fatta beslut – inte bara ge den ett färgat riskregister.",
+sections:[
+["Vad styrelsen behöver veta",[
+"Vad har förändrats? Vilka risker ligger utanför appetite? Vilka scenarios är relevanta? Vilka beslut behövs?",
+"Rapporteringen ska vara framåtblickande och fokuserad på materialitet."
+]],
+["Less is more",[
+"Tio välprioriterade riskfrågor med trend, drivers, controls och beslutspunkter är ofta mer användbart än ett register med 70 risker."
+],"Risk reporting = decision support."]
+],
+senior:["Vad behöver styrelsen besluta?","Vilken risk har förändrats mest?","Vilka antaganden är mest osäkra?","Vilken exposure är utanför appetite?"],
+quiz:[
+["Bra board reporting fokuserar främst på...",["Antal risker","Förändring, exposure och beslut","Alla controls","Historiska incidenter"],1,"Styrelsen behöver förstå vad som kräver uppmärksamhet och beslut."]
+]},
+
+/* -------------------- POLITICS -------------------- */
+
+{
+id:"p1",course:"politics",courseName:"Internationell politik",
+title:"1. Staten, suveränitet och makt",duration:"11 min",level:"University Foundation",
+intro:"Internationell politik börjar med staten som central aktör och med frågan om hur makt fungerar.",
+sections:[
+["Staten",["En stat har territorium, befolkning, institutioner och anspråk på legitim politisk auktoritet.","Staten är inte samma sak som regeringen. Regeringar byts; staten består."]],
+["Suveränitet",["Suveränitet innebär formellt högsta auktoritet inom territoriet och självständighet gentemot andra stater."]],
+["Makt",["Makt kan vara militär, ekonomisk, teknologisk, institutionell, diplomatisk eller kulturell."]]
+],
+senior:["Skilj mellan formell makt och faktisk kapacitet.","Analysera institutioner, inte bara ledare.","Se ekonomiska beroenden som maktresurser."],
+quiz:[
+["Vad skiljer stat från regering?",["Inget","Staten är den permanenta strukturen","Regeringen är permanent","Staten finns bara i demokratier"],1,"Regeringen leder staten under en viss period."]
+]},
+
+{
+id:"p2",course:"politics",courseName:"Internationell politik",
+title:"2. Det internationella systemet",duration:"12 min",level:"University Foundation",
+intro:"Internationell politik beskrivs ofta som ett anarkiskt system.",
+sections:[
+["Anarki",[
+"Anarki betyder inte kaos. Det betyder att det saknas en världsregering med överordnad auktoritet över suveräna stater.",
+"Stater måste därför i stor utsträckning själva hantera sin säkerhet."
+]],
+["Säkerhetsdilemmat",[
+"När en stat ökar sin militära kapacitet för att bli säkrare kan andra uppfatta det som hotfullt och rusta upp.",
+"Alla kan därmed bli mindre säkra trots defensiva intentioner."
+]]
+],
+senior:["Analysera situationen ur varje aktörs perspektiv.","Defensivt för en aktör kan uppfattas offensivt av en annan."],
+quiz:[
+["Vad betyder anarki här?",["Kaos","Ingen global överordnad regering","Ingen internationell rätt","Ingen handel"],1,"Begreppet beskriver systemets struktur."]
+]},
+
+{
+id:"p3",course:"politics",courseName:"Internationell politik",
+title:"3. Realism",duration:"12 min",level:"University",
+intro:"Realismen fokuserar på säkerhet, makt och staters överlevnad i ett anarkiskt system.",
+sections:[
+["Grundantaganden",[
+"Stater kan inte vara säkra på andra staters framtida intentioner.",
+"Militär och ekonomisk kapacitet blir därför viktiga resurser."
+]],
+["Maktbalans",[
+"Stater kan balansera mot starkare eller hotfulla aktörer genom egen upprustning eller allianser.",
+"Realister är särskilt intresserade av relativa vinster och förändringar i maktbalansen."
+]]
+],
+senior:["Vems säkerhet förbättras?","Vems relativa makt ökar?","Vilka balansreaktioner kan följa?"],
+quiz:[
+["Vad är särskilt centralt i realism?",["Makt och säkerhet","Endast handel","Identitet utan makt","Avskaffande av staten"],0,"Realismen betonar säkerhet och maktbalans."]
+]},
+
+{
+id:"p4",course:"politics",courseName:"Internationell politik",
+title:"4. Liberalism",duration:"12 min",level:"University",
+intro:"Liberalismen försöker förklara hur samarbete kan uppstå trots internationell anarki.",
+sections:[
+["Institutioner",[
+"Internationella institutioner kan minska informationsproblem, skapa regler och göra samarbete mer förutsägbart."
+]],
+["Interdependens",[
+"Handel och ekonomiska beroenden kan öka kostnaden för konflikt.",
+"Samtidigt kan beroenden skapa strategiska sårbarheter."
+]]
+],
+senior:["Vilka institutioner förändrar incitament?","Vilka beroenden skapar både nytta och sårbarhet?"],
+quiz:[
+["Vad betonar liberal teori?",["Samarbete och institutioner","Att samarbete är omöjligt","Bara kärnvapen","Att staten saknar betydelse"],0,"Institutioner och interdependens är centrala liberala teman."]
+]},
+
+{
+id:"p5",course:"politics",courseName:"Internationell politik",
+title:"5. Konstruktivism",duration:"12 min",level:"University",
+intro:"Konstruktivismen betonar att idéer, identiteter och normer påverkar staters intressen och beteenden.",
+sections:[
+["Intressen är inte alltid givna",[
+"Realister utgår ofta från säkerhet och makt som centrala intressen. Konstruktivister frågar hur aktörer lär sig vad de ska vilja.",
+"Identitet och normer kan förändra vad som uppfattas som legitimt, hotfullt eller möjligt."
+]],
+["Normer",[
+"Förbud och tabun kan påverka staters beteende även när det inte finns en central världsmakt som tvingar fram efterlevnad."
+]]
+],
+senior:["Hur definierar aktören sin identitet?","Vilka normer begränsar handlingsutrymmet?","Hur har hotbilden socialt konstruerats?"],
+quiz:[
+["Konstruktivism betonar särskilt...",["Identiteter och normer","Endast BNP","Endast militär kapacitet","Geografi som enda förklaring"],0,"Konstruktivismen fokuserar på idéers och normers betydelse."]
+]},
+
+{
+id:"p6",course:"politics",courseName:"Internationell politik",
+title:"6. Varför uppstår krig?",duration:"13 min",level:"University",
+intro:"Krig är kostsamt. En central fråga är därför varför stater ändå misslyckas med att hitta fredliga överenskommelser.",
+sections:[
+["Informationsproblem",[
+"Stater kan ha privat information om kapacitet och vilja och samtidigt incitament att överdriva.",
+"Det gör det svårt att veta hur motparten faktiskt skulle agera."
+]],
+["Commitment problems",[
+"En överenskommelse kan misslyckas om en part inte kan lita på att den andra håller den i framtiden.",
+"Snabba maktförskjutningar kan göra sådana problem särskilt allvarliga."
+]],
+["Indivisible issues",[
+"I vissa konflikter är det svårt att dela den omstridda frågan, åtminstone politiskt eller symboliskt."
+]]
+],
+senior:["Vilken information saknas?","Kan parterna trovärdigt binda sig?","Finns en förhandlingszon?"],
+quiz:[
+["Vad är ett commitment problem?",["Brist på handel","Svårighet att trovärdigt hålla framtida löften","Att parter saknar militär","Ett valresultat"],1,"Problemet gäller trovärdigheten i framtida åtaganden."]
+]},
+
+{
+id:"p7",course:"politics",courseName:"Internationell politik",
+title:"7. Avskräckning och tvångsmakt",duration:"12 min",level:"University",
+intro:"Deterrence handlar om att få en motpart att avstå från handling genom hot om kostnader.",
+sections:[
+["Deterrence",[
+"Avskräckning försöker bevara status quo: gör inte X, annars följer kostnad Y.",
+"Trovärdighet kräver både kapacitet och vilja."
+]],
+["Compellence",[
+"Compellence försöker få en aktör att ändra sitt beteende, vilket ofta är svårare än att avskräcka."
+]]
+],
+senior:["Är hotet trovärdigt?","Har motparten en ansiktsräddande väg tillbaka?","Kan eskalering kontrolleras?"],
+quiz:[
+["Deterrence syftar främst till att...",["Få en aktör att avstå","Tvinga fram regimskifte","Skapa handel","Avskaffa allianser"],0,"Avskräckning försöker hindra en handling."]
+]},
+
+{
+id:"p8",course:"politics",courseName:"Internationell politik",
+title:"8. Allianser, Nato och kollektivt försvar",duration:"12 min",level:"University",
+intro:"Allianser förändrar kalkylen för både medlemmar och motståndare.",
+sections:[
+["Varför allianser?",[
+"Stater kan söka allierade för att balansera makt, avskräcka motståndare eller minska egen försvarsbörda."
+]],
+["Dilemman",[
+"Allianser skapar risk för abandonment – att en partner inte hjälper – och entrapment – att dras in i en konflikt man helst undvikit.",
+"Kollektivt försvar bygger därför starkt på trovärdighet."
+]]
+],
+senior:["Vem garanterar vem?","Är garantin trovärdig?","Hur påverkar alliansen motpartens hotuppfattning?"],
+quiz:[
+["Entrapment betyder...",["Att bli övergiven","Att dras in i partnerns konflikt","Att lämna en allians","Att sakna militär"],1,"Entrapment är risken att en allianspartner drar in dig i konflikt."]
+]},
+
+{
+id:"p9",course:"politics",courseName:"Internationell politik",
+title:"9. FN, internationell rätt och institutioner",duration:"13 min",level:"University",
+intro:"Internationella institutioner skapar regler och forum men verkar fortfarande i ett system av suveräna stater.",
+sections:[
+["FN-systemet",[
+"FN kombinerar principen om staters suveräna likställdhet med ett säkerhetsråd där fem permanenta medlemmar har vetorätt.",
+"Det speglar både juridiska ideal och politisk makt."
+]],
+["Internationell rätt",[
+"Internationell rätt reglerar bland annat våldsanvändning, traktater, mänskliga rättigheter och väpnad konflikt.",
+"Efterlevnad påverkas av institutioner, reciprocitet, legitimitet och makt."
+]]
+],
+senior:["Vilken institution har faktisk beslutskompetens?","Vilka vetoaktörer finns?","Vad händer om norm och makt kolliderar?"],
+quiz:[
+["Vad visar vetorätten i säkerhetsrådet?",["Att makt saknar betydelse","Kombinationen av institutioner och stormaktspolitik","Att FN är en stat","Att alla medlemmar är permanenta"],1,"Institutionell design speglar också maktförhållanden."]
+]},
+
+{
+id:"p10",course:"politics",courseName:"Internationell politik",
+title:"10. International Political Economy",duration:"13 min",level:"University",
+intro:"Internationell politisk ekonomi studerar sambandet mellan makt, stater, marknader, handel och kapital.",
+sections:[
+["Handel är politiskt",[
+"Handel skapar vinnare och förlorare inom och mellan länder.",
+"Tariffer, exportkontroller och subventioner kan därför användas både ekonomiskt och strategiskt."
+]],
+["Geoekonomi",[
+"Ekonomiska instrument används allt oftare för strategiska mål: sanktioner, investeringskontroll, export restrictions och industrial policy.",
+"Det suddar ut gränsen mellan ekonomi och säkerhet."
+]]
+],
+senior:["Vilket beroende kan användas som hävstång?","Vem bär kostnaden för decoupling?","Vilka industries betraktas som strategiska?"],
+quiz:[
+["Geoekonomi betyder ungefär...",["Att ekonomi saknar politik","Användning av ekonomiska verktyg för strategiska mål","Endast valutahandel","Biståndspolitik"],1,"Geoekonomi kopplar ekonomiska instrument till geopolitisk strategi."]
+]},
+
+/* -------------------- GEOPOLITICS -------------------- */
+
+{
+id:"g1",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"1. Från världshändelse till företagsrisk",duration:"11 min",level:"Professional",
+intro:"En geopolitisk nyhet blir företagsrisk först när den träffar en faktisk affärsexponering.",
+sections:[
+["Påverkningskedjan",[
+"Utgå inte från rubriken. Följ kedjan från politisk utveckling till policy- eller marknadseffekt och vidare till verksamheten.",
+"Exempel: stormaktsspänning → exportkontroll → komponentbrist → produktionsstopp → intäktsbortfall."
+],"Geopolitisk utveckling → transmission mechanism → exposure → business impact."],
+["Materialitet",[
+"Alla världshändelser är inte materiella för alla företag.",
+"Fokusera på var verksamheten har människor, leverantörer, kunder, data, kapital och regulatorisk exponering."
+]]
+],
+senior:["Var finns faktisk exposure?","Vilken transmission mechanism är mest sannolik?","Vilket beslut kan behöva fattas?"],
+quiz:[
+["När blir geopolitik företagsrisk?",["När något står i nyheterna","När utvecklingen träffar verksamhetens mål eller exponering","Bara vid krig","Bara vid sanktioner"],1,"Kopplingen till verksamheten är avgörande."]
+]},
+
+{
+id:"g2",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"2. Aktörer, intressen och kapacitet",duration:"12 min",level:"Professional",
+intro:"Bra geopolitisk analys börjar med aktörer, intressen, resurser och begränsningar.",
+sections:[
+["Aktörskarta",[
+"Identifiera stater, myndigheter, politiska grupper, företag, allianser och andra relevanta aktörer.",
+"Ett land är inte alltid en enhetlig aktör; olika institutioner kan ha olika preferenser."
+]],
+["Intresse och förmåga",[
+"Skilj på vad en aktör vill och vad den faktiskt kan genomföra.",
+"Retorik utan kapacitet har annan betydelse än ambition kombinerad med resurser."
+]]
+],
+senior:["Vad måste aktören uppnå?","Vilken kapacitet finns?","Vilka interna constraints begränsar agerandet?"],
+quiz:[
+["Vad bör analyseras tillsammans?",["Popularitet och väder","Intresse och kapacitet","BNP och flagga","Tal och pressbilder"],1,"Ambition måste vägas mot faktisk förmåga."]
+]},
+
+{
+id:"g3",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"3. Country Risk",duration:"12 min",level:"Professional",
+intro:"Country risk handlar om hur politiska, regulatoriska, ekonomiska och institutionella förhållanden påverkar företagets verksamhet i ett land.",
+sections:[
+["Fyra lager",[
+"Bedöm politisk stabilitet, institutionell kvalitet, makroekonomi och företagsspecifika exposures.",
+"Ett land med hög övergripande risk kan fortfarande vara hanterbart för en viss affärsmodell – och tvärtom."
+]],
+["Triggers",[
+"Country risk bör följas med indikatorer: val, kapitalrestriktioner, valutastress, social oro, rättsliga förändringar och säkerhetsutveckling."
+]]
+],
+senior:["Vad kan regeringen faktiskt göra mot vår verksamhet?","Kan kapital eller data fastna?","Hur snabbt kan vi reducera exposure?"],
+quiz:[
+["Country risk bör vara...",["Samma för alla företag","Kopplad till företagets specifika exposure","Endast en kreditrating","Endast politisk risk"],1,"Företagets affärsmodell avgör materialiteten."]
+]},
+
+{
+id:"g4",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"4. Sanktioner & Export Controls",duration:"13 min",level:"Professional",
+intro:"Sanktioner och exportkontroller är centrala geoekonomiska verktyg och kan skapa snabb compliance- och affärsrisk.",
+sections:[
+["Sanktioner",[
+"Sanktioner kan rikta sig mot stater, sektorer, företag, individer eller specifika transaktioner.",
+"Exponering kan uppstå genom customers, suppliers, banks, ownership structures och shipping routes."
+]],
+["Export controls",[
+"Exportkontroller begränsar tillgången till vissa produkter, komponenter, mjukvara eller teknologi.",
+"Dual-use och avancerad teknologi gör detta särskilt relevant i stormaktskonkurrens."
+]]
+],
+senior:["Vilken indirekt exposure finns?","Vad händer med befintliga contracts?","Vilka substitutionsmöjligheter har vi?"],
+quiz:[
+["Varför är indirect exposure viktig?",["Den är aldrig viktig","Risk kan uppstå via partners och ägarstrukturer","Bara staten träffas","Sanktioner gäller bara banker"],1,"Tredjepartsrelationer kan skapa sanktionsexponering."]
+]},
+
+{
+id:"g5",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"5. Supply Chain Geopolitics",duration:"12 min",level:"Professional",
+intro:"Globala supply chains bygger på koncentration, effektivitet och beroenden – samma faktorer som kan skapa geopolitisk sårbarhet.",
+sections:[
+["Koncentration",[
+"Single-source och regional koncentration kan skapa kostnadsfördelar men också single points of failure.",
+"En korrekt analys behöver gå längre än tier-1 suppliers."
+]],
+["Resilience",[
+"Dual sourcing, safety stock, substitution, nearshoring och strategic inventory kan minska exposure men kostar pengar.",
+"Risk management handlar därför om trade-offs, inte maximal redundans."
+]]
+],
+senior:["Var finns vår verkliga tier-n concentration?","Hur lång är qualification lead time?","Vad är recovery time?"],
+quiz:[
+["Vad är single point of failure?",["En redundant leverantör","Ett beroende vars bortfall kan stoppa kritisk verksamhet","En KRI","En policy"],1,"Koncentration kan göra ett enda bortfall kritiskt."]
+]},
+
+{
+id:"g6",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"6. USA–Kina och teknologisk rivalitet",duration:"13 min",level:"Advanced",
+intro:"USA–Kina-konkurrensen kombinerar militär strategi, handel, teknologi, kapital och industripolitik.",
+sections:[
+["Teknologi som makt",[
+"Semiconductors, AI, cloud, telecom och kritisk infrastruktur har blivit strategiska områden.",
+"Företag kan påverkas av export controls, investment screening, procurement restrictions och data rules."
+]],
+["De-risking",[
+"Företag försöker ofta minska koncentration utan full decoupling.",
+"Det kräver förståelse för vilka beroenden som är strategiskt kritiska och vilka som är ekonomiskt rationella."
+]]
+],
+senior:["Vilken technology är dual-use?","Kan en regeländring göra vår business model illegal?","Vad är vår China-for-China respektive China-for-world exposure?"],
+quiz:[
+["De-risking betyder bäst...",["Total ekonomisk separation","Minskning av kritiska sårbarheter utan nödvändigtvis full separation","Frihandel utan risk","Militär allians"],1,"De-risking försöker minska strategisk sårbarhet."]
+]},
+
+{
+id:"g7",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"7. Europa, Ryssland och energi",duration:"12 min",level:"Advanced",
+intro:"Europeisk säkerhet, energi och industriell konkurrenskraft är tätt sammanflätade.",
+sections:[
+["Energi som strategic dependency",[
+"Energiflöden påverkar kostnader, industriell kapacitet och politiskt handlingsutrymme.",
+"Snabb diversifiering kan samtidigt skapa nya beroenden."
+]],
+["Security–economics nexus",[
+"Europeiska företag måste i ökad grad väga ekonomisk effektivitet mot försörjningssäkerhet och strategisk autonomi."
+]]
+],
+senior:["Vilket beroende har bara flyttats?","Vilka kostnader är strukturella?","Hur påverkar säkerhetspolitik investeringsbeslut?"],
+quiz:[
+["Strategiskt beroende betyder...",["Alla importer","Ett beroende där disruption kan få betydande strategiska konsekvenser","Bara energi","En låg kostnad"],1,"Materialitet och substituerbarhet är centrala."]
+]},
+
+{
+id:"g8",course:"geo",courseName:"Geopolitisk företagsrisk",
+title:"8. Middle East, shipping & energy security",duration:"12 min",level:"Advanced",
+intro:"Mellanöstern är centralt för energi, handel, shipping routes och regional säkerhet.",
+sections:[
+["Chokepoints",[
+"Strategiska sjövägar kan skapa koncentrerad global exposure.",
+"Störningar kan påverka freight rates, insurance, delivery times och energy prices."
+]],
+["Regional escalation",[
+"Företagsanalys bör fokusera på escalation pathways snarare än enbart binära krig/fred-scenarier."
+]]
+],
+senior:["Vilken chokepoint påverkar oss?","Hur snabbt kan logistics reroutas?","Vilken andra ordningens effekt kan bli större än den direkta?"],
+quiz:[
+["Varför är chokepoints viktiga?",["De har alltid billig transport","Stora flöden koncentreras geografiskt","De påverkar bara militärer","De eliminerar risk"],1,"Koncentration gör störningar potentiellt systemiska."]
+]}
+
+];
+
+/* =========================================================
+   SCENARIOS
+========================================================= */
+
+const scenarios = [
+{
+id:"s1",type:"Boardroom case · Supply Chain",title:"Taiwan Strait escalation",
+situation:"Ditt företag är beroende av avancerade komponenter från leverantörer i Taiwan. Ledtiden för alternativa leverantörer är 12–18 månader. Den politiska och militära spänningen ökar, men produktionen fungerar fortfarande normalt.",
+question:"Vilket är det bästa första ledningsbeslutet?",
+choices:[
+"Flytta omedelbart all produktion och acceptera vilken kostnad som helst.",
+"Avvakta helt tills ett faktiskt avbrott inträffar.",
+"Definiera scenarios och triggers, kartlägg tier-n exposure och finansiera kvalificering av alternativ nu.",
+"Ta bara upp frågan i nästa års risk assessment."
+],
+best:2,
+partner:"Det robusta svaret är att agera före krisen utan att låtsas veta exakt vad som kommer att hända. Kartlägg kritiska dependencies, skapa escalation scenarios, sätt triggers och starta de åtgärder som har lång lead time redan nu."
+},
+{
+id:"s2",type:"CRO case · Risk Appetite",title:"Aggressiv tillväxt vs compliance",
+situation:"Ledningen vill dubbla tillväxten på tre år i flera nya marknader. Compliance-teamet bedömer att onboarding, third-party due diligence och monitoring redan är nära kapacitetsgränsen.",
+question:"Vad bör riskfunktionen göra?",
+choices:[
+"Stoppa strategin eftersom compliance alltid har noll risk appetite.",
+"Acceptera strategin utan förändring eftersom tillväxt är ledningens ansvar.",
+"Översätt strategin till exposure, testa den mot risk appetite och tydliggör vilka resurser och controls som krävs.",
+"Skriva en ny policy."
+],
+best:2,
+partner:"Riskfunktionen ska inte äga strategibeslutet men göra trade-offen synlig. Om bolaget vill öka exposure måste governance, controls och kapacitet skala med ambitionen – annars är uttalad risk appetite inte trovärdig."
+},
+{
+id:"s3",type:"Geopolitical case · Sanctions",title:"Ny sanktionsrisk",
+situation:"En viktig distributor har en komplex ägarstruktur och medieuppgifter kopplar indirekt en minoritetsägare till en potentiellt sanktionerad aktör. Inga nya sanktioner har ännu publicerats.",
+question:"Vilken approach är starkast?",
+choices:[
+"Avsluta relationen omedelbart enbart på grund av medieuppgifter.",
+"Ignorera frågan tills någon juridisk sanktion publiceras.",
+"Gör enhanced due diligence, analysera ownership/control och definiera triggerbaserade handlingsalternativ.",
+"Be distributören intyga att allt är okej och stäng frågan."
+],
+best:2,
+partner:"Osäkerhet kräver proportionerlig beredskap. Fördjupa fakta, förstå ownership/control, kartlägg operational dependencies och definiera vad som händer vid olika rättsliga eller politiska triggers."
+},
+{
+id:"s4",type:"International Relations · Theory",title:"Upprustning mellan två stater",
+situation:"Land A beskriver nya missilsystem som rent defensiva. Land B svarar med egen upprustning och säger att A har förändrat den regionala maktbalansen.",
+question:"Vilket koncept förklarar dynamiken bäst?",
+choices:[
+"Democratic peace theory",
+"Säkerhetsdilemmat",
+"Comparative advantage",
+"Soft power"
+],
+best:1,
+partner:"Säkerhetsdilemmat fångar hur åtgärder som uppfattas som defensiva av den ena parten kan upplevas som hotfulla av den andra och skapa en självförstärkande spiral."
+},
+{
+id:"s5",type:"Board case · Reporting",title:"Styrelsen får 73 risker",
+situation:"CRO presenterar kvartalsvis ett register med 73 risker, heatmaps och hundratals actions. Styrelsen upplever att rapporten är omfattande men ändå inte hjälper dem förstå vad som kräver beslut.",
+question:"Vilken förändring ger störst värde?",
+choices:[
+"Lägg till ännu fler risker.",
+"Ta bort alla datapunkter.",
+"Prioritera materiella risker, förändringar, appetite breaches, scenarios och tydliga decision asks.",
+"Rapportera bara incidenter."
+],
+best:2,
+partner:"Styrelserapportering ska komprimera komplexitet till beslutsrelevant information. Färre materiella frågor med trend, drivers, controls, uncertainty och konkreta beslutspunkter är ofta betydligt starkare."
+}
+];
+
+/* =========================================================
+   DAILY CARDS
+========================================================= */
+
+const dailyCards = [
+["Risk Management","Risk appetite","Hur mycket risk organisationen är villig att ta för att nå sina mål.","Exempel: hög appetite för innovation men mycket låg appetite för mutor."],
+["Risk Management","Residual risk","Den exponering som finns kvar efter att befintliga controls beaktats.","Fråga alltid: ligger residual risk inom appetite?"],
+["COSO","Governance & Culture","Governance bestämmer ansvar och oversight. Kultur påverkar hur människor faktiskt beter sig.","En policy hjälper inte om dåliga nyheter systematiskt filtreras bort."],
+["International Politics","Security dilemma","En stats försvarsåtgärder kan uppfattas som hotfulla av en annan stat.","Defensivt för A kan uppfattas offensivt av B."],
+["International Politics","Realism","Ett perspektiv som betonar makt, säkerhet och staters överlevnad.","Fråga: hur förändrar beslutet maktbalansen?"],
+["Geopolitics","Transmission mechanism","Mekanismen som översätter en geopolitisk händelse till business impact.","Sanktion → bankrestriktion → betalningsproblem → revenue impact."],
+["Geopolitics","De-risking","Att minska kritiska sårbarheter utan att nödvändigtvis bryta alla ekonomiska relationer.","Diversifiering kan vara de-risking; total separation är decoupling."],
+["Risk Management","KRI","En indikator som signalerar förändrad riskexponering.","Bäst blir KRI:n när en threshold utlöser en definierad action."]
+];
+
+/* =========================================================
+   STORAGE
+========================================================= */
+
+const PROGRESS_KEY="atlas_v1_progress";
+const RISKS_KEY="atlas_v1_risks";
+
+function load(key,fallback){
+  try{
+    const x=JSON.parse(localStorage.getItem(key));
+    return x ?? fallback;
+  }catch(e){ return fallback; }
+}
+
+let progress=load(PROGRESS_KEY,{completed:[],scores:{},dailyIndex:0});
+let risks=load(RISKS_KEY,[]);
+let currentLesson=null;
+let answers={};
+let activeFilter="all";
+
+function saveProgress(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress))}
+function saveRisks(){localStorage.setItem(RISKS_KEY,JSON.stringify(risks))}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function showPage(id){
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));
+  document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
+  $("sidebar").classList.remove("open");
+  window.scrollTo(0,0);
+}
+
+document.querySelectorAll("[data-page]").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+document.querySelectorAll("[data-page-link]").forEach(b=>b.onclick=()=>showPage(b.dataset.pageLink));
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+function isCompleted(id){return progress.completed.includes(id)}
+
+function pct(course=null){
+  const set=course?lessons.filter(l=>l.course===course):lessons;
+  if(!set.length)return 0;
+  return Math.round(set.filter(l=>isCompleted(l.id)).length/set.length*100);
+}
+
+function updateProgress(){
+  const total=pct();
+  $("totalPercent").textContent=total;
+  $("progressPercent").textContent=total;
+  $("totalBar").style.width=total+"%";
+  $("progressBar").style.width=total+"%";
+
+  [["risk","riskPct","riskBar"],["politics","politicsPct","politicsBar"],["geo","geoPct","geoBar"]]
+    .forEach(([c,t,b])=>{
+      const p=pct(c);
+      $(t).textContent=p+"%";
+      $(b).style.width=p+"%";
+    });
+
+  $("levelName").textContent=
+    total<25?"Foundation":
+    total<55?"Practitioner":
+    total<85?"Advanced":"Executive";
+
+  const next=lessons.find(l=>!isCompleted(l.id));
+  if(next){
+    $("heroTitle").textContent=next.title;
+    $("heroCopy").textContent=`${next.courseName} · ${next.duration}. ${next.intro}`;
+  }else{
+    $("heroTitle").textContent="Atlas Academy v1.0 är genomförd.";
+    $("heroCopy").textContent="Du har genomfört alla kärnlektioner. Använd nu Risk Lab och Scenario Lab för repetition och tillämpning.";
+  }
+  renderCompleted();
+}
+
+/* =========================================================
+   COURSE LIBRARY
+========================================================= */
+
+function renderLessons(filter=activeFilter){
+  activeFilter=filter;
+  const set=filter==="all"?lessons:lessons.filter(l=>l.course===filter);
+
+  $("lessonList").innerHTML=set.map((l,i)=>`
+    <article class="lesson ${isCompleted(l.id)?"completed":""}">
+      <div class="lesson-number">${isCompleted(l.id)?"✓":i+1}</div>
+      <div>
+        <div class="eyebrow">${l.courseName}</div>
+        <h3>${l.title}</h3>
+        <p>${l.duration} · ${l.level}${progress.scores[l.id]!==undefined?" · Quiz "+progress.scores[l.id]+"%":""}</p>
+      </div>
+      <button class="btn btn-light" onclick="openLesson('${l.id}')">
+        ${isCompleted(l.id)?"Öppna igen":"Starta"}
+      </button>
+    </article>
+  `).join("");
+}
+
+document.querySelectorAll(".filter").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    renderLessons(b.dataset.filter);
+  };
+});
+
+document.querySelectorAll("[data-course]").forEach(b=>{
+  b.onclick=()=>{
+    showPage("courses");
+    document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===b.dataset.course));
+    renderLessons(b.dataset.course);
+  };
+});
+
+$("continueLearning").onclick=()=>{
+  const next=lessons.find(l=>!isCompleted(l.id));
+  next?openLesson(next.id):showPage("progress");
+};
+
+/* =========================================================
+   LESSON ENGINE
+========================================================= */
+
+function openLesson(id){
+  const l=lessons.find(x=>x.id===id);
+  if(!l)return;
+
+  currentLesson=id;
+  answers={};
+
+  $("lessonCourse").textContent=l.courseName;
+  $("lessonTitle").textContent=l.title;
+  $("lessonIntro").textContent=l.intro;
+  $("lessonMeta").textContent=`${l.duration} · ${l.level}`;
+
+  $("lessonSections").innerHTML=l.sections.map(s=>`
+    <section class="lesson-section">
+      <h3>${s[0]}</h3>
+      ${s[1].map(p=>`<p>${p}</p>`).join("")}
+      ${s[2]?`<div class="concept"><strong>Kom ihåg</strong><br>${s[2]}</div>`:""}
+    </section>
+  `).join("");
+
+  $("seniorList").innerHTML=l.senior.map(x=>`<li>${x}</li>`).join("");
+  renderQuiz(l);
+  updateLessonNav();
+  showPage("lessonPage");
+}
+
+function renderQuiz(l){
+  $("quizQuestions").innerHTML=l.quiz.map((q,qi)=>`
+    <div class="quiz-question">
+      <strong>${qi+1}. ${q[0]}</strong>
+      <div class="options">
+        ${q[1].map((o,oi)=>`<button class="option" data-q="${qi}" data-o="${oi}">${o}</button>`).join("")}
+      </div>
+      <div class="feedback" id="fb-${qi}"></div>
+    </div>
+  `).join("");
+
+  $("quizResult").innerHTML="";
+
+  document.querySelectorAll(".option").forEach(b=>{
+    b.onclick=()=>{
+      const qi=Number(b.dataset.q),oi=Number(b.dataset.o);
+      answers[qi]=oi;
+      document.querySelectorAll(`[data-q="${qi}"]`).forEach(x=>x.classList.remove("selected"));
+      b.classList.add("selected");
+    };
+  });
+}
+
+$("submitQuiz").onclick=()=>{
+  const l=lessons.find(x=>x.id===currentLesson);
+  if(!l)return;
+
+  if(Object.keys(answers).length<l.quiz.length){
+    toast("Svara på alla frågor först.");
+    return;
+  }
+
+  let correct=0;
+
+  l.quiz.forEach((q,qi)=>{
+    const selected=answers[qi];
+    document.querySelectorAll(`[data-q="${qi}"]`).forEach((b,oi)=>{
+      b.classList.remove("selected");
+      if(oi===q[2])b.classList.add("correct");
+      if(oi===selected&&oi!==q[2])b.classList.add("wrong");
+    });
+
+    if(selected===q[2])correct++;
+
+    const fb=$(`fb-${qi}`);
+    fb.innerHTML=`<strong>${selected===q[2]?"Rätt":"Inte riktigt"}.</strong> ${q[3]}`;
+    fb.classList.add("visible");
+  });
+
+  const score=Math.round(correct/l.quiz.length*100);
+  progress.scores[l.id]=score;
+  if(!isCompleted(l.id))progress.completed.push(l.id);
+  saveProgress();
+  updateProgress();
+  renderLessons();
+
+  $("quizResult").innerHTML=`
+    <div class="concept">
+      <strong>${score}% rätt</strong><br>
+      ${score===100?"Mycket bra. Du har grepp om kärnan.":score>=70?"Bra. Du kan gå vidare.":"Läs gärna förklaringarna och repetera lektionen en gång."}
+    </div>`;
+  toast("Lektionen är sparad som genomförd.");
+};
+
+$("restartQuiz").onclick=()=>openLesson(currentLesson);
+$("backToCourses").onclick=()=>showPage("courses");
+
+function updateLessonNav(){
+  const i=lessons.findIndex(l=>l.id===currentLesson);
+  $("previousLesson").disabled=i===0;
+  $("previousLesson").style.opacity=i===0?".45":"1";
+  $("nextLesson").textContent=i===lessons.length-1?"Till progression →":"Nästa →";
+}
+$("previousLesson").onclick=()=>{
+  const i=lessons.findIndex(l=>l.id===currentLesson);
+  if(i>0)openLesson(lessons[i-1].id);
+};
+$("nextLesson").onclick=()=>{
+  const i=lessons.findIndex(l=>l.id===currentLesson);
+  i<lessons.length-1?openLesson(lessons[i+1].id):showPage("progress");
+};
+
+/* =========================================================
+   COMPLETED
+========================================================= */
+
+function renderCompleted(){
+  const done=lessons.filter(l=>isCompleted(l.id));
+  $("completedLessons").innerHTML=done.length?done.map(l=>`
+    <article class="lesson completed">
+      <div class="lesson-number">✓</div>
+      <div>
+        <h3>${l.title}</h3>
+        <p>${l.courseName}${progress.scores[l.id]!==undefined?" · Quiz "+progress.scores[l.id]+"%":""}</p>
+      </div>
+      <button class="btn btn-light" onclick="openLesson('${l.id}')">Öppna</button>
+    </article>
+  `).join(""):`<div class="empty">Din första genomförda lektion visas här.</div>`;
+}
+
+/* =========================================================
+   DAILY
+========================================================= */
+
+function renderDaily(){
+  const i=progress.dailyIndex%dailyCards.length;
+  const d=dailyCards[i];
+  $("dailyCategory").textContent=d[0];
+  $("dailyTitle").textContent=d[1];
+  $("dailyText").textContent=d[2];
+  $("dailyExample").innerHTML=`<strong>Exempel</strong><br>${d[3]}`;
+}
+$("nextDaily").onclick=()=>{
+  progress.dailyIndex=(progress.dailyIndex+1)%dailyCards.length;
+  saveProgress();
+  renderDaily();
+};
+
+/* =========================================================
+   RISK LAB
+========================================================= */
+
+const scaleOptions=[
+  [1,"1 – Mycket låg"],[2,"2 – Låg"],[3,"3 – Medel"],[4,"4 – Hög"],[5,"5 – Mycket hög"]
+];
+["inherentLikelihood","inherentImpact","residualLikelihood","residualImpact"].forEach((id,index)=>{
+  $(id).innerHTML=scaleOptions.map(([v,t])=>`<option value="${v}" ${v===(index<2?3:index===2?2:3)?"selected":""}>${t}</option>`).join("");
+});
+
+const riskInputIds=["riskTitle","objective","cause","event","consequence","controls","inherentLikelihood","inherentImpact","residualLikelihood","residualImpact","riskOwner","response","actions"];
+
+riskInputIds.forEach(id=>{
+  $(id).addEventListener("input",updateRiskPreview);
+  $(id).addEventListener("change",updateRiskPreview);
+});
+
+function esc(v){
+  return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+}
+
+function updateRiskPreview(){
+  const c=$("cause").value.trim(),e=$("event").value.trim(),k=$("consequence").value.trim();
+
+  $("riskStatement").innerHTML=`
+    <strong>Risk statement</strong><br>
+    På grund av <b>${esc(c||"[orsak]")}</b> finns en risk att
+    <b>${esc(e||"[riskhändelse]")}</b>, vilket kan leda till
+    <b>${esc(k||"[konsekvens]")}</b>.
+  `;
+
+  const inherent=Number($("inherentLikelihood").value)*Number($("inherentImpact").value);
+  const residual=Number($("residualLikelihood").value)*Number($("residualImpact").value);
+  $("inherentScore").textContent=inherent;
+  $("residualScore").textContent=residual;
+
+  let msg="";
+  if(residual>inherent)msg="Residual risk är högre än inherent risk. Kontrollera logiken i bedömningen.";
+  else if(residual===inherent)msg="Controls reducerar inte den bedömda exponeringen. Är de verkligen effektiva?";
+  else if(residual<=5)msg="Residual exposure är relativt låg. Nästa fråga är om den ligger inom organisationens risk appetite.";
+  else msg="Det finns fortfarande materiell residual exposure. Bedöm om ytterligare mitigation eller escalation krävs.";
+
+  $("riskInsight").innerHTML=`<strong>Partner perspective</strong><br>${msg}`;
+}
+
+function riskLevel(score){
+  if(score<=4)return"Low";
+  if(score<=9)return"Moderate";
+  if(score<=15)return"High";
+  return"Critical";
+}
+
+$("saveRisk").onclick=()=>{
+  if(!$("riskTitle").value.trim()||!$("objective").value.trim()||!$("cause").value.trim()||!$("event").value.trim()||!$("consequence").value.trim()){
+    toast("Fyll i risknamn, mål, orsak, händelse och konsekvens.");
+    return;
+  }
+
+  const risk={
+    id:Date.now(),
+    title:$("riskTitle").value.trim(),
+    objective:$("objective").value.trim(),
+    cause:$("cause").value.trim(),
+    event:$("event").value.trim(),
+    consequence:$("consequence").value.trim(),
+    controls:$("controls").value.trim(),
+    inherent:Number($("inherentLikelihood").value)*Number($("inherentImpact").value),
+    residual:Number($("residualLikelihood").value)*Number($("residualImpact").value),
+    owner:$("riskOwner").value.trim(),
+    response:$("response").value,
+    actions:$("actions").value.trim(),
+    created:new Date().toLocaleDateString("sv-SE")
+  };
+
+  risks.unshift(risk);
+  saveRisks();
+  renderRisks();
+  clearRiskForm();
+  toast("Risken är sparad.");
+};
+
+$("clearRisk").onclick=clearRiskForm;
+
+function clearRiskForm(){
+  ["riskTitle","objective","cause","event","consequence","controls","riskOwner","actions"].forEach(id=>$(id).value="");
+  $("inherentLikelihood").value="3";
+  $("inherentImpact").value="3";
+  $("residualLikelihood").value="2";
+  $("residualImpact").value="3";
+  $("response").value="Reduce";
+  updateRiskPreview();
+}
+
+function deleteRisk(id){
+  if(!confirm("Ta bort denna risk?"))return;
+  risks=risks.filter(r=>r.id!==id);
+  saveRisks();
+  renderRisks();
+}
+
+function renderRisks(){
+  $("riskRecords").innerHTML=risks.length?risks.map(r=>`
+    <article class="risk-record">
+      <div class="risk-record-top">
+        <div>
+          <div class="eyebrow">${esc(r.created)}</div>
+          <h4>${esc(r.title)}</h4>
+        </div>
+        <span class="badge">${riskLevel(r.residual)}</span>
+      </div>
+
+      <p><strong>Mål:</strong> ${esc(r.objective)}</p>
+      <p>
+        På grund av <strong>${esc(r.cause)}</strong> finns en risk att
+        <strong>${esc(r.event)}</strong>, vilket kan leda till
+        <strong>${esc(r.consequence)}</strong>.
+      </p>
+
+      <div class="mini-stats">
+        <span class="mini-stat">Inherent: ${r.inherent}</span>
+        <span class="mini-stat">Residual: ${r.residual}</span>
+        <span class="mini-stat">${esc(r.response)}</span>
+        ${r.owner?`<span class="mini-stat">Owner: ${esc(r.owner)}</span>`:""}
+      </div>
+
+      ${r.controls?`<p><strong>Controls:</strong> ${esc(r.controls)}</p>`:""}
+      ${r.actions?`<p><strong>Actions:</strong> ${esc(r.actions)}</p>`:""}
+
+      <div class="actions">
+        <button class="btn btn-danger" onclick="deleteRisk(${r.id})">Ta bort</button>
+      </div>
+    </article>
+  `).join(""):`<div class="empty">Ditt första sparade risk scenario visas här.</div>`;
+}
+
+/* =========================================================
+   SCENARIO LAB
+========================================================= */
+
+function renderScenarios(){
+  $("scenarioList").innerHTML=scenarios.map(s=>`
+    <article class="scenario-card">
+      <div class="scenario-meta">${s.type}</div>
+      <h3>${s.title}</h3>
+      <p>${s.situation}</p>
+      <div class="actions" style="margin-top:auto;padding-top:17px">
+        <button class="btn btn-dark" onclick="openScenario('${s.id}')">Öppna scenario</button>
+      </div>
+    </article>
+  `).join("");
+}
+
+function openScenario(id){
+  const s=scenarios.find(x=>x.id===id);
+  if(!s)return;
+
+  $("scenarioMeta").textContent=s.type;
+  $("scenarioTitle").textContent=s.title;
+  $("scenarioSituation").textContent=s.situation;
+  $("scenarioQuestion").innerHTML=`<strong>Din uppgift</strong><br>${s.question}`;
+
+  $("scenarioChoices").innerHTML=s.choices.map((c,i)=>`
+    <button class="choice" onclick="answerScenario('${s.id}',${i})">${c}</button>
+  `).join("");
+
+  $("partnerAnswer").classList.remove("visible");
+  $("partnerAnswer").innerHTML="";
+  showPage("scenarioPage");
+}
+
+function answerScenario(id,index){
+  const s=scenarios.find(x=>x.id===id);
+  $("partnerAnswer").innerHTML=`
+    <div class="eyebrow" style="color:#d9bd8e">Senior Partner Perspective</div>
+    <strong>${index===s.best?"Starkt val.":"Inte det starkaste alternativet."}</strong>
+    <p>${s.partner}</p>
+  `;
+  $("partnerAnswer").classList.add("visible");
+}
+
+$("backScenarios").onclick=()=>showPage("scenarios");
+
+/* =========================================================
+   RESET + MOBILE + TOAST
+========================================================= */
+
+$("resetProgress").onclick=()=>{
+  if(!confirm("Vill du nollställa all kursprogression och alla quizresultat?"))return;
+  progress={completed:[],scores:{},dailyIndex:0};
+  saveProgress();
+  updateProgress();
+  renderLessons();
+  renderDaily();
+  toast("Progressionen är nollställd.");
+};
+
+function toast(text){
+  $("toast").textContent=text;
+  $("toast").classList.add("visible");
+  clearTimeout(window.atlasToast);
+  window.atlasToast=setTimeout(()=>$("toast").classList.remove("visible"),2300);
+}
+
+$("openMenu").onclick=()=>$("sidebar").classList.add("open");
+$("closeMenu").onclick=()=>$("sidebar").classList.remove("open");
+
+/* =========================================================
+   INIT
+========================================================= */
+
+renderLessons();
+renderDaily();
+renderRisks();
+renderScenarios();
+updateRiskPreview();
+updateProgress();
+
+</script>
+</body>
+</html>
