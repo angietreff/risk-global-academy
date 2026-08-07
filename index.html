@@ -403,8 +403,6 @@ header h2{
   margin-top:3px;
 }
 
-/* LESSON VIEW */
-
 .lesson-shell{
   max-width:860px;
   margin:auto;
@@ -437,6 +435,14 @@ header h2{
 
 .lesson-section p+p{
   margin-top:13px;
+}
+
+.lesson-section ul{
+  margin:14px 0 0 20px;
+}
+
+.lesson-section li+li{
+  margin-top:7px;
 }
 
 .concept{
@@ -524,8 +530,6 @@ header h2{
 .feedback.visible{
   display:block;
 }
-
-/* RISK LAB */
 
 .lab-grid{
   display:grid;
@@ -861,8 +865,6 @@ header h2{
 
 <main>
 
-<!-- DASHBOARD -->
-
 <section class="page active" id="dashboard">
 
 <header>
@@ -952,8 +954,8 @@ header h2{
   <div class="course-icon">⚖</div>
   <h3>COSO & Risk Management</h3>
   <p>
-    Risk, governance, kontroller, risk appetite, bedömning,
-    KRI:er och styrelserapportering.
+    Risk, governance, strategi, risk appetite, kontroller,
+    KRI:er, review och styrelserapportering.
   </p>
 
   <div class="course-footer">
@@ -1015,24 +1017,19 @@ header h2{
 
 </section>
 
-<!-- COURSES -->
-
 <section class="page" id="courses">
 
 <header>
   <div class="eyebrow">Kursbibliotek</div>
   <h2>Lektioner</h2>
   <p class="header-copy">
-    Kort nog för vardagen, men med tillräckligt djup för att
-    successivt bygga verklig expertis.
+    Korta pass som successivt bygger upp ett sammanhängande ramverk.
   </p>
 </header>
 
 <div class="lesson-list" id="lessonList"></div>
 
 </section>
-
-<!-- DAILY -->
 
 <section class="page" id="daily">
 
@@ -1060,8 +1057,6 @@ header h2{
 
 </section>
 
-<!-- RISK LAB -->
-
 <section class="page" id="risklab">
 
 <header>
@@ -1069,15 +1064,12 @@ header h2{
   <h2>Risk Lab</h2>
 
   <p class="header-copy">
-    Träna på att tänka som en senior risk professional.
-    Börja med målet, formulera risken och bedöm sedan
-    exponeringen före och efter kontroller.
+    Träna på att formulera risker, bedöma inherent och residual risk
+    och dokumentera riskägare, kontroller och actions.
   </p>
 </header>
 
 <div class="lab-grid">
-
-<!-- FORM -->
 
 <div class="form-card">
 
@@ -1088,24 +1080,17 @@ header h2{
 
     <h4>1. Börja med målet</h4>
     <p class="help">
-      En risk är bara meningsfull i relation till något
-      verksamheten försöker uppnå.
+      En risk är bara meningsfull i relation till något verksamheten försöker uppnå.
     </p>
 
     <div class="field">
       <label for="riskTitle">Kort namn på risken</label>
-      <input
-        id="riskTitle"
-        placeholder="Exempel: Kritisk leverantör"
-      >
+      <input id="riskTitle" placeholder="Exempel: Kritisk leverantör">
     </div>
 
     <div class="field">
       <label for="objective">Vilket mål påverkas?</label>
-      <textarea
-        id="objective"
-        placeholder="Exempel: Säkerställa kontinuerlig och kostnadseffektiv produktion."
-      ></textarea>
+      <textarea id="objective" placeholder="Exempel: Säkerställa kontinuerlig och kostnadseffektiv produktion."></textarea>
     </div>
 
   </div>
@@ -1116,26 +1101,17 @@ header h2{
 
     <div class="field">
       <label for="cause">Orsak</label>
-      <textarea
-        id="cause"
-        placeholder="På grund av..."
-      ></textarea>
+      <textarea id="cause" placeholder="På grund av..."></textarea>
     </div>
 
     <div class="field">
       <label for="event">Riskhändelse</label>
-      <textarea
-        id="event"
-        placeholder="finns en risk att..."
-      ></textarea>
+      <textarea id="event" placeholder="finns en risk att..."></textarea>
     </div>
 
     <div class="field">
       <label for="consequence">Konsekvens</label>
-      <textarea
-        id="consequence"
-        placeholder="vilket kan leda till..."
-      ></textarea>
+      <textarea id="consequence" placeholder="vilket kan leda till..."></textarea>
     </div>
 
   </div>
@@ -1186,10 +1162,7 @@ header h2{
         Vilka kontroller eller åtgärder finns redan?
       </label>
 
-      <textarea
-        id="controls"
-        placeholder="Exempel: Dual sourcing, säkerhetslager och kvartalsvis leverantörsbedömning."
-      ></textarea>
+      <textarea id="controls" placeholder="Exempel: Dual sourcing, säkerhetslager och kvartalsvis leverantörsbedömning."></textarea>
     </div>
 
   </div>
@@ -1230,10 +1203,7 @@ header h2{
 
     <div class="field">
       <label for="riskOwner">Risk owner</label>
-      <input
-        id="riskOwner"
-        placeholder="Exempel: Chief Supply Chain Officer"
-      >
+      <input id="riskOwner" placeholder="Exempel: Chief Supply Chain Officer">
     </div>
 
     <div class="field">
@@ -1249,10 +1219,7 @@ header h2{
 
     <div class="field">
       <label for="actions">Ytterligare actions</label>
-      <textarea
-        id="actions"
-        placeholder="Vad behöver göras härnäst?"
-      ></textarea>
+      <textarea id="actions" placeholder="Vad behöver göras härnäst?"></textarea>
     </div>
 
   </div>
@@ -1269,8 +1236,6 @@ header h2{
 
 </div>
 
-<!-- PREVIEW -->
-
 <div>
 
 <div class="preview-card">
@@ -1280,7 +1245,7 @@ header h2{
 
   <div class="risk-statement" id="riskStatement">
     <strong>Risk statement</strong>
-    Fyll i orsak, riskhändelse och konsekvens för att bygga formuleringen.
+    Fyll i orsak, riskhändelse och konsekvens.
   </div>
 
   <div class="risk-score">
@@ -1290,9 +1255,7 @@ header h2{
       <div class="muted">Likelihood × impact</div>
     </div>
 
-    <div class="score-circle" id="inherentScore">
-      9
-    </div>
+    <div class="score-circle" id="inherentScore">9</div>
 
   </div>
 
@@ -1303,16 +1266,14 @@ header h2{
       <div class="muted">Efter befintliga kontroller</div>
     </div>
 
-    <div class="score-circle" id="residualScore">
-      6
-    </div>
+    <div class="score-circle" id="residualScore">6</div>
 
   </div>
 
   <div class="concept" id="riskInsight">
     <strong>Partner perspective</strong>
     Bedömningen blir mest användbar när du kan förklara varför
-    kontrollerna faktiskt reducerar sannolikheten eller konsekvensen.
+    kontrollerna reducerar sannolikheten eller konsekvensen.
   </div>
 
 </div>
@@ -1352,8 +1313,6 @@ header h2{
 
 </section>
 
-<!-- PROGRESS -->
-
 <section class="page" id="progress">
 
 <header>
@@ -1366,11 +1325,7 @@ header h2{
 <div class="card">
   <h3>Genomförda lektioner</h3>
 
-  <div
-    id="completedLessons"
-    class="lesson-list"
-    style="margin-top:15px"
-  ></div>
+  <div id="completedLessons" class="lesson-list" style="margin-top:15px"></div>
 </div>
 
 <div class="card progress-card">
@@ -1399,17 +1354,11 @@ header h2{
 
 </section>
 
-<!-- LESSON -->
-
 <section class="page" id="lessonPage">
 
 <div class="lesson-shell">
 
-<button
-  class="btn btn-light"
-  id="backToCourses"
-  style="margin-bottom:18px"
->
+<button class="btn btn-light" id="backToCourses" style="margin-bottom:18px">
   ← Tillbaka till kurser
 </button>
 
@@ -1419,16 +1368,9 @@ header h2{
 
   <h2 id="lessonTitle"></h2>
 
-  <p
-    class="header-copy"
-    id="lessonIntro"
-  ></p>
+  <p class="header-copy" id="lessonIntro"></p>
 
-  <div
-    class="muted"
-    id="lessonMeta"
-    style="margin-top:14px;font-size:12px"
-  ></div>
+  <div class="muted" id="lessonMeta" style="margin-top:14px;font-size:12px"></div>
 
 </div>
 
@@ -1466,10 +1408,7 @@ header h2{
     </button>
   </div>
 
-  <div
-    id="quizResult"
-    style="margin-top:16px"
-  ></div>
+  <div id="quizResult" style="margin-top:16px"></div>
 
 </div>
 
@@ -1496,10 +1435,6 @@ header h2{
 <div class="toast" id="toast"></div>
 
 <script>
-
-/* =========================================
-   COURSE DATA
-========================================= */
 
 const lessons = [
 
@@ -1589,6 +1524,13 @@ const lessons = [
    paragraphs:[
     "På grund av bristande datastyrning finns en risk att rapporterad hållbarhetsdata blir felaktig, vilket kan leda till regulatoriska överträdelser, felaktiga beslut och förtroendeskada."
    ]
+  },
+  {
+   title:"Varför formuleringen spelar roll",
+   paragraphs:[
+    "Om du inte kan beskriva risken tydligt blir det svårt att välja rätt kontroll, rätt owner och rätt risk response.",
+    "En vag formulering skapar ofta lika vaga actions."
+   ]
   }
  ],
  senior:[
@@ -1608,6 +1550,614 @@ const lessons = [
    ],
    correct:1,
    explanation:"Det gör sambanden i risken tydliga."
+  }
+ ]
+},
+
+{
+ id:"risk-3",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Vad är COSO ERM?",
+ duration:"12 min",
+ level:"Foundation",
+ intro:"COSO ERM är ett ramverk för att integrera risk med strategi, styrning och performance.",
+ sections:[
+  {
+   title:"ERM är inte ett riskregister",
+   paragraphs:[
+    "Enterprise Risk Management handlar inte främst om att dokumentera risker. Det handlar om att integrera risk i hur organisationen styrs och fattar beslut.",
+    "Ett riskregister är därför ett verktyg, inte själva systemet."
+   ]
+  },
+  {
+   title:"De fem komponenterna",
+   paragraphs:[
+    "COSO ERM består av fem övergripande komponenter som tillsammans skapar ett sammanhängande system."
+   ],
+   list:[
+    "Governance and Culture",
+    "Strategy and Objective-Setting",
+    "Performance",
+    "Review and Revision",
+    "Information, Communication and Reporting"
+   ],
+   concept:"COSO:s styrka är kopplingen mellan risk, strategi, kultur, beslut och performance."
+  }
+ ],
+ senior:[
+  "Fråga alltid om riskarbetet faktiskt påverkar beslut.",
+  "Om ERM bara aktiveras inför styrelserapportering är det inte integrerat.",
+  "Ett moget ERM-system är en del av verksamhetsstyrningen."
+ ],
+ quiz:[
+  {
+   q:"Vad är COSO ERM främst till för?",
+   options:[
+    "Att skapa ett riskregister",
+    "Att integrera risk med strategi och performance",
+    "Att ersätta internrevision",
+    "Att eliminera all risk"
+   ],
+   correct:1,
+   explanation:"COSO ERM handlar om att integrera risk med hur verksamheten styrs och presterar."
+  }
+ ]
+},
+
+{
+ id:"risk-4",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Governance & Culture",
+ duration:"12 min",
+ level:"Foundation",
+ intro:"Governance och kultur avgör om risk management faktiskt fungerar i vardagen.",
+ sections:[
+  {
+   title:"Styrelsens roll",
+   paragraphs:[
+    "Styrelsen ska förstå organisationens viktigaste risker och hur de förhåller sig till strategi och risk appetite.",
+    "Styrelsen ska utmana ledningen, inte detaljstyra alla risker."
+   ]
+  },
+  {
+   title:"Riskkultur",
+   paragraphs:[
+    "Riskkultur handlar om hur människor beter sig när de möter osäkerhet, dåliga nyheter, målkonflikter och incitament.",
+    "Det räcker inte att ha rätt policyer om medarbetare inte vågar eskalera problem."
+   ],
+   concept:"Tone at the top är viktigt, men tone in the middle avgör ofta hur kulturen faktiskt känns."
+  }
+ ],
+ senior:[
+  "Vilket beteende belönas i praktiken?",
+  "Vågar människor lyfta dåliga nyheter?",
+  "Har riskägare mandat eller bara ansvar på papper?",
+  "Skapar bonusmål oönskat risktagande?"
+ ],
+ quiz:[
+  {
+   q:"Vad är ett typiskt tecken på svag riskkultur?",
+   options:[
+    "Tydliga ansvar",
+    "Tidiga eskaleringar",
+    "Dåliga nyheter filtreras bort",
+    "Aktiva riskdiskussioner"
+   ],
+   correct:2,
+   explanation:"När negativa signaler inte når ledningen fungerar governance och kultur dåligt."
+  }
+ ]
+},
+
+{
+ id:"risk-5",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Strategy & Objective-Setting",
+ duration:"12 min",
+ level:"Foundation",
+ intro:"Risk management blir strategiskt först när risk diskuteras innan beslut låses.",
+ sections:[
+  {
+   title:"Risk före beslut",
+   paragraphs:[
+    "Ett moget riskarbete kommer in när strategiska alternativ utvärderas, inte bara efteråt.",
+    "När ett företag överväger expansion, transformation eller M&A ska risk vara en del av själva beslutet."
+   ]
+  },
+  {
+   title:"Mål måste vara tillräckligt tydliga",
+   paragraphs:[
+    "Riskbedömning kräver att målen är konkreta nog för att man ska förstå vad som kan påverkas.",
+    "Vaga mål skapar vaga riskdiskussioner."
+   ],
+   concept:"Strategi → mål → risk → respons → performance."
+  }
+ ],
+ senior:[
+  "Vilka strategiska antaganden bygger planen på?",
+  "Vad måste vara sant för att strategin ska lyckas?",
+  "Vilka risker ökar om vi accelererar?",
+  "Vilka risker skapas om vi avstår?"
+ ],
+ quiz:[
+  {
+   q:"När bör risk diskuteras i strategiarbetet?",
+   options:[
+    "Först efter att strategin är beslutad",
+    "När strategiska alternativ analyseras",
+    "Bara vid kris",
+    "Endast när styrelsen ber om det"
+   ],
+   correct:1,
+   explanation:"Risk ska integreras i valet av strategi, inte bara dokumenteras efteråt."
+  }
+ ]
+},
+
+{
+ id:"risk-6",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Risk Appetite",
+ duration:"12 min",
+ level:"Professional",
+ intro:"Risk appetite beskriver hur mycket risk organisationen är villig att ta för att nå sina mål.",
+ sections:[
+  {
+   title:"Olika risker kräver olika aptit",
+   paragraphs:[
+    "En organisation kan ha hög riskaptit för innovation men låg riskaptit för regelefterlevnad.",
+    "Det viktiga är att risk appetite faktiskt påverkar prioriteringar och beslut."
+   ]
+  },
+  {
+   title:"Appetite, tolerance och limits",
+   paragraphs:[
+    "Risk appetite är den övergripande viljan att ta risk. Tolerance beskriver acceptabla variationer kring mål. Limits och thresholds gör detta mer operativt."
+   ],
+   concept:"Risk appetite blir användbar först när den översätts till konkreta beslutsgränser."
+  }
+ ],
+ senior:[
+  "Om vi säger låg riskaptit, syns det i resurser och kontroller?",
+  "Vilka beslut ska stoppas när en gräns passeras?",
+  "Är formuleringen mätbar nog för att användas?",
+  "Finns det konflikter mellan tillväxtmål och uttalad riskaptit?"
+ ],
+ quiz:[
+  {
+   q:"Vad beskriver risk appetite?",
+   options:[
+    "Hur många risker som finns",
+    "Hur mycket risk organisationen är villig att ta",
+    "Hur många kontroller som krävs",
+    "Endast styrelsens tolerans för finansiell risk"
+   ],
+   correct:1,
+   explanation:"Risk appetite uttrycker organisationens övergripande vilja att ta risk för att skapa värde."
+  }
+ ]
+},
+
+{
+ id:"risk-7",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Performance: identifiera risker",
+ duration:"12 min",
+ level:"Professional",
+ intro:"Performance-komponenten handlar om hur risker identifieras, bedöms, prioriteras och hanteras.",
+ sections:[
+  {
+   title:"Riskidentifiering",
+   paragraphs:[
+    "Risker kan identifieras genom workshops, data, incidenter, interviews, trendanalys, omvärldsbevakning och processgenomgångar.",
+    "Ingen metod är tillräcklig ensam."
+   ]
+  },
+  {
+   title:"Undvik checklist-fällan",
+   paragraphs:[
+    "Riskuniversum och taxonomier är användbara, men de kan också begränsa tänkandet.",
+    "Fråga alltid vad som förändrats och vilka nya beroenden som skapats."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka risker ser verksamheten men inte second line?",
+  "Vilka risker ser second line men inte ledningen?",
+  "Vilka risker finns mellan organisationssilos?",
+  "Vilka risker uppstår av strategiska beroenden?"
+ ],
+ quiz:[
+  {
+   q:"Vilken metod är bäst för riskidentifiering?",
+   options:[
+    "Endast workshops",
+    "Endast incidentdata",
+    "En kombination av flera källor",
+    "Endast risk taxonomy"
+   ],
+   correct:2,
+   explanation:"Olika metoder fångar olika typer av risker."
+  }
+ ]
+},
+
+{
+ id:"risk-8",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Inherent vs Residual Risk",
+ duration:"10 min",
+ level:"Professional",
+ intro:"Skillnaden mellan inherent och residual risk är avgörande för att förstå kontrollernas effekt.",
+ sections:[
+  {
+   title:"Inherent risk",
+   paragraphs:[
+    "Inherent risk är risknivån innan befintliga kontroller eller riskreducerande åtgärder beaktas."
+   ]
+  },
+  {
+   title:"Residual risk",
+   paragraphs:[
+    "Residual risk är den exponering som återstår efter att kontroller och åtgärder har beaktats.",
+    "Skillnaden mellan nivåerna säger något om hur mycket kontrollmiljön faktiskt reducerar exponeringen."
+   ],
+   concept:"Hög inherent risk är inte automatiskt ett problem om residual risk är väl hanterad och inom appetite."
+  }
+ ],
+ senior:[
+  "Är kontrollernas effekt verklig eller antagen?",
+  "Finns bevis för operating effectiveness?",
+  "Har residual risk bedömts för optimistiskt?",
+  "Är risknivån inom appetite?"
+ ],
+ quiz:[
+  {
+   q:"Vad är residual risk?",
+   options:[
+    "Risk innan kontroller",
+    "Risk efter att kontroller beaktats",
+    "Risk utan risk owner",
+    "Risk som alltid ska accepteras"
+   ],
+   correct:1,
+   explanation:"Residual risk är kvarvarande exponering efter kontroller och åtgärder."
+  }
+ ]
+},
+
+{
+ id:"risk-9",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Risk Response",
+ duration:"10 min",
+ level:"Professional",
+ intro:"När en risk är bedömd behöver verksamheten välja hur den ska hanteras.",
+ sections:[
+  {
+   title:"Fyra klassiska responses",
+   paragraphs:[
+    "Vanliga risk responses är reduce, accept, avoid och share/transfer."
+   ],
+   list:[
+    "Reduce – minska sannolikhet eller konsekvens",
+    "Accept – leva med exponeringen",
+    "Avoid – avstå från aktiviteten",
+    "Share/Transfer – dela risken med annan part"
+   ]
+  },
+  {
+   title:"Proportionerlighet",
+   paragraphs:[
+    "Det är inte alltid rationellt att reducera en risk maximalt.",
+    "Kostnaden för ytterligare kontroll måste vägas mot riskreduktionen."
+   ]
+  }
+ ],
+ senior:[
+  "Vilken residual risk återstår efter responsen?",
+  "Är kostnaden rimlig?",
+  "Vilken risk skapas av själva åtgärden?",
+  "Vem accepterar risken formellt?"
+ ],
+ quiz:[
+  {
+   q:"Vilken risk response innebär att verksamheten avstår från aktiviteten?",
+   options:["Reduce","Accept","Avoid","Transfer"],
+   correct:2,
+   explanation:"Avoid innebär att aktiviteten som skapar risken inte genomförs."
+  }
+ ]
+},
+
+{
+ id:"risk-10",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Controls & Control Effectiveness",
+ duration:"12 min",
+ level:"Professional",
+ intro:"Kontroller ska minska eller upptäcka risk – men en policy är inte automatiskt en effektiv kontroll.",
+ sections:[
+  {
+   title:"Typer av kontroller",
+   paragraphs:[
+    "Kontroller kan vara preventiva, detektiva eller korrektiva.",
+    "De kan också vara manuella, automatiserade eller en kombination."
+   ]
+  },
+  {
+   title:"Design vs operating effectiveness",
+   paragraphs:[
+    "Design effectiveness handlar om huruvida kontrollen är rätt utformad.",
+    "Operating effectiveness handlar om huruvida den faktiskt fungerar konsekvent över tid."
+   ],
+   concept:"En kontroll som finns dokumenterad men inte utförs är inte effektiv."
+  }
+ ],
+ senior:[
+  "Vilket riskmoment adresserar kontrollen?",
+  "Hur vet vi att kontrollen utförs?",
+  "Vilken evidens finns?",
+  "Är kontrollen tillräckligt precis för att faktiskt reducera risken?"
+ ],
+ quiz:[
+  {
+   q:"Vad beskriver operating effectiveness?",
+   options:[
+    "Om kontrollen är snyggt dokumenterad",
+    "Om kontrollen fungerar i praktiken över tid",
+    "Om riskägaren känner till kontrollen",
+    "Om kontrollen är automatisk"
+   ],
+   correct:1,
+   explanation:"Operating effectiveness handlar om faktisk, konsekvent funktion."
+  }
+ ]
+},
+
+{
+ id:"risk-11",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Review & Revision",
+ duration:"10 min",
+ level:"Professional",
+ intro:"Risklandskapet förändras. Därför måste både riskbedömningar och själva ERM-systemet granskas och justeras.",
+ sections:[
+  {
+   title:"Vad har förändrats?",
+   paragraphs:[
+    "Nya regelverk, teknik, marknader, leverantörer och strategier kan snabbt göra gamla riskbedömningar inaktuella."
+   ]
+  },
+  {
+   title:"Lessons learned",
+   paragraphs:[
+    "Incidenter och nästan-incidenter bör användas som input till förbättring.",
+    "Review handlar inte bara om att uppdatera siffror utan om att ifrågasätta antaganden."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka antaganden har blivit fel?",
+  "Vilka kontroller visade sig svagare än vi trodde?",
+  "Vilka nya beroenden har uppstått?",
+  "Vad behöver förändras i själva riskprocessen?"
+ ],
+ quiz:[
+  {
+   q:"Vad är syftet med Review & Revision?",
+   options:[
+    "Att frysa riskmodellen",
+    "Att uppdatera och förbättra riskarbetet när förutsättningar förändras",
+    "Att ersätta styrelsen",
+    "Att minska rapporteringen"
+   ],
+   correct:1,
+   explanation:"Risk management måste anpassas när verksamhet och omvärld förändras."
+  }
+ ]
+},
+
+{
+ id:"risk-12",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Information, Communication & Reporting",
+ duration:"12 min",
+ level:"Professional",
+ intro:"Riskinformation måste nå rätt person, i rätt tid och i ett format som stödjer beslut.",
+ sections:[
+  {
+   title:"Bra riskrapportering",
+   paragraphs:[
+    "Rapporter ska inte bara visa en lista av risker. De ska visa vad som förändrats, varför det spelar roll och vilket beslut som behövs."
+   ]
+  },
+  {
+   title:"Styrelseperspektivet",
+   paragraphs:[
+    "Styrelsen behöver förstå trend, exponering mot appetite, osäkerheter och eventuella beslutspunkter."
+   ],
+   concept:"Riskrapportering är beslutsstöd, inte dokumentation för dokumentationens skull."
+  }
+ ],
+ senior:[
+  "Vad har förändrats sedan förra rapporten?",
+  "Vilken risk ligger över appetite?",
+  "Vilka beslut krävs?",
+  "Vilka risker är mest framåtblickande?"
+ ],
+ quiz:[
+  {
+   q:"Vad kännetecknar bra riskrapportering?",
+   options:[
+    "Så många risker som möjligt",
+    "Tydlig koppling till förändring, exposure och beslut",
+    "Endast röd-gul-grön",
+    "Endast historiska incidenter"
+   ],
+   correct:1,
+   explanation:"Bra rapportering ska stödja styrning och beslut."
+  }
+ ]
+},
+
+{
+ id:"risk-13",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"KRI – Key Risk Indicators",
+ duration:"10 min",
+ level:"Professional",
+ intro:"KRI:er hjälper organisationen att se om riskexponeringen är på väg att förändras.",
+ sections:[
+  {
+   title:"Ledande och laggande indikatorer",
+   paragraphs:[
+    "En laggande indikator visar vad som redan hänt. En ledande indikator kan ge en signal innan risken materialiseras."
+   ]
+  },
+  {
+   title:"Thresholds",
+   paragraphs:[
+    "En KRI blir mer användbar när den har tydliga thresholds och kopplade actions."
+   ],
+   concept:"En indikator utan beslutsregel är ofta bara statistik."
+  }
+ ],
+ senior:[
+  "Vilken indikator ger oss tidigast signal?",
+  "Vad händer när threshold passeras?",
+  "Vem äger responsen?",
+  "Finns indikatorn nära den verkliga riskdrivaren?"
+ ],
+ quiz:[
+  {
+   q:"Vad gör en KRI särskilt användbar?",
+   options:[
+    "Att den är snygg",
+    "Att den är kopplad till thresholds och actions",
+    "Att den alltid är finansiell",
+    "Att den rapporteras årsvis"
+   ],
+   correct:1,
+   explanation:"Thresholds och tydliga actions gör indikatorn styrbar."
+  }
+ ]
+},
+
+{
+ id:"risk-14",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Case: Global retail expansion",
+ duration:"15 min",
+ level:"Case",
+ intro:"Du sitter i en ledningsgrupp som överväger expansion till en ny marknad.",
+ sections:[
+  {
+   title:"Situationen",
+   paragraphs:[
+    "Bolaget vill öppna 80 butiker på tre år i ett land där konsumentmarknaden växer snabbt.",
+    "Samtidigt är regelverket komplext, lokala partners krävs och valutan är volatil."
+   ]
+  },
+  {
+   title:"Din analys",
+   paragraphs:[
+    "Identifiera de viktigaste strategiska antagandena och de risker som kan påverka målet."
+   ],
+   list:[
+    "Regulatory risk",
+    "Partner risk",
+    "Currency risk",
+    "Supply chain risk",
+    "Brand and conduct risk"
+   ]
+  },
+  {
+   title:"Beslutsfrågan",
+   paragraphs:[
+    "Ledningen behöver inte bara veta vilka risker som finns. Den behöver veta om expansionen fortfarande är attraktiv givet riskerna och vilka mitigations som krävs."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka risker förändrar själva investeringscaset?",
+  "Vilka risker kan hanteras efter beslut och vilka måste påverka beslutet?",
+  "Vilken risk appetite gäller för expansion?",
+  "Vilka triggers skulle få oss att pausa?"
+ ],
+ quiz:[
+  {
+   q:"Vilken är den mest seniora frågan i caset?",
+   options:[
+    "Hur många risker finns?",
+    "Är expansionen fortfarande attraktiv givet riskerna?",
+    "Hur många policies behövs?",
+    "Vilken risk är röd?"
+   ],
+   correct:1,
+   explanation:"Senior risk management handlar om beslut, inte bara inventering."
+  }
+ ]
+},
+
+{
+ id:"risk-15",
+ course:"risk",
+ courseName:"COSO & Risk Management",
+ title:"Case: Third-party supplier risk",
+ duration:"15 min",
+ level:"Case",
+ intro:"En kritisk leverantör står för 60 procent av en viktig komponent.",
+ sections:[
+  {
+   title:"Situationen",
+   paragraphs:[
+    "Leverantören finns i ett område med ökande politisk instabilitet.",
+    "Alternativa leverantörer finns men kräver investering och 12 månaders kvalificering."
+   ]
+  },
+  {
+   title:"Riskformulering",
+   paragraphs:[
+    "På grund av hög leverantörskoncentration och geopolitisk instabilitet finns risk för leveransavbrott, vilket kan leda till produktionsstopp och intäktsförlust."
+   ]
+  },
+  {
+   title:"Kontroller och respons",
+   paragraphs:[
+    "Organisationen behöver bedöma säkerhetslager, dual sourcing, avtal, kvalificering av alternativ och eventuella exit-scenarier."
+   ]
+  }
+ ],
+ senior:[
+  "Vilken del av risken kan kontrollerna faktiskt reducera?",
+  "Hur lång är vår recovery time?",
+  "Vilket scenario gör att nuvarande setup inte längre är acceptabel?",
+  "När måste investering i alternativ beslutas?"
+ ],
+ quiz:[
+  {
+   q:"Vad är den viktigaste strategiska svagheten i caset?",
+   options:[
+    "Att leverantören är utländsk",
+    "Hög koncentration till en kritisk leverantör",
+    "Att avtal finns",
+    "Att komponenten är viktig"
+   ],
+   correct:1,
+   explanation:"Koncentrationen skapar en tydlig single point of failure."
   }
  ]
 },
@@ -1707,6 +2257,86 @@ const lessons = [
 },
 
 {
+ id:"politics-3",
+ course:"politics",
+ courseName:"Internationell politik",
+ title:"Realism",
+ duration:"12 min",
+ level:"University foundation",
+ intro:"Realismen utgår från att säkerhet, makt och staters överlevnad är centrala i ett anarkiskt internationellt system.",
+ sections:[
+  {
+   title:"Kärnidén",
+   paragraphs:[
+    "Eftersom ingen överordnad aktör kan garantera staters säkerhet måste de i hög grad själva skydda sina intressen.",
+    "Detta gör maktbalans, militär kapacitet och strategiska relationer centrala."
+   ]
+  },
+  {
+   title:"Relativa vinster",
+   paragraphs:[
+    "Realister frågar inte bara om båda parter tjänar på samarbete, utan även vem som tjänar mest och hur det påverkar framtida maktbalans."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka säkerhetsintressen är icke-förhandlingsbara?",
+  "Hur förändras maktbalansen?",
+  "Vilka allianser eller motallianser kan uppstå?"
+ ],
+ quiz:[
+  {
+   q:"Vilket begrepp är särskilt centralt i realism?",
+   options:["Maktbalans","Kulturell identitet","Endast handel","Inrikespolitik utan säkerhet"],
+   correct:0,
+   explanation:"Maktbalans och säkerhet är centrala realistiska teman."
+  }
+ ]
+},
+
+{
+ id:"politics-4",
+ course:"politics",
+ courseName:"Internationell politik",
+ title:"Liberalism",
+ duration:"12 min",
+ level:"University foundation",
+ intro:"Liberalismen fokuserar mer på samarbete, institutioner, handel och ömsesidigt beroende.",
+ sections:[
+  {
+   title:"Samarbete är möjligt",
+   paragraphs:[
+    "Internationella institutioner kan minska osäkerhet, skapa regler och sänka kostnaderna för samarbete."
+   ]
+  },
+  {
+   title:"Interdependens",
+   paragraphs:[
+    "Ekonomiskt beroende kan skapa incitament för stabilitet, men kan också skapa sårbarhet."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka institutioner förändrar incitamenten?",
+  "Vilka beroenden skapar både nytta och sårbarhet?",
+  "Vilka regler gör samarbete mer trovärdigt?"
+ ],
+ quiz:[
+  {
+   q:"Vad betonar liberal teori särskilt?",
+   options:[
+    "Att samarbete är omöjligt",
+    "Institutioner och ömsesidigt beroende",
+    "Endast militär makt",
+    "Att staten saknar betydelse"
+   ],
+   correct:1,
+   explanation:"Liberalismen lyfter fram institutioner, handel och samarbete."
+  }
+ ]
+},
+
+{
  id:"geo-1",
  course:"geo",
  courseName:"Geopolitisk företagsrisk",
@@ -1793,14 +2423,52 @@ const lessons = [
    explanation:"Aktörens mål måste analyseras tillsammans med faktisk kapacitet."
   }
  ]
+},
+
+{
+ id:"geo-3",
+ course:"geo",
+ courseName:"Geopolitisk företagsrisk",
+ title:"Scenario Thinking",
+ duration:"12 min",
+ level:"Professional",
+ intro:"Geopolitisk risk management handlar mindre om exakt prognos och mer om att förbereda organisationen på flera plausibla framtider.",
+ sections:[
+  {
+   title:"Flera möjliga framtider",
+   paragraphs:[
+    "Scenarioanalys hjälper ledningen att testa strategi mot olika utvecklingar.",
+    "Målet är inte att gissa rätt utan att förbättra beredskap."
+   ]
+  },
+  {
+   title:"Triggers och indikatorer",
+   paragraphs:[
+    "Bra scenarier innehåller signaler som visar vilket scenario omvärlden rör sig mot."
+   ]
+  }
+ ],
+ senior:[
+  "Vilka scenarier förändrar beslutet?",
+  "Vilka triggers måste följas?",
+  "Hur lång lead time behöver verksamheten för att agera?"
+ ],
+ quiz:[
+  {
+   q:"Vad är huvudsyftet med scenarioanalys?",
+   options:[
+    "Att alltid förutsäga framtiden korrekt",
+    "Att testa strategi mot flera plausibla framtider",
+    "Att undvika alla beslut",
+    "Att ersätta riskbedömning"
+   ],
+   correct:1,
+   explanation:"Scenarioanalys handlar om beredskap och robusta beslut."
+  }
+ ]
 }
 
 ];
-
-
-/* =========================================
-   STORAGE
-========================================= */
 
 const PROGRESS_KEY="atlasProgress";
 const RISKS_KEY="atlasRisks";
@@ -1838,11 +2506,6 @@ function saveRisks(){
  localStorage.setItem(RISKS_KEY,JSON.stringify(risks));
 }
 
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
 function showPage(id){
 
  document.querySelectorAll(".page").forEach(p=>{
@@ -1864,11 +2527,6 @@ document.querySelectorAll("[data-page]").forEach(b=>{
 document.querySelectorAll("[data-page-link]").forEach(b=>{
  b.onclick=()=>showPage(b.dataset.pageLink);
 });
-
-
-/* =========================================
-   PROGRESS
-========================================= */
 
 function completed(id){
  return progress.completed.includes(id);
@@ -1928,11 +2586,6 @@ function updateHero(){
   `${next.courseName} · ${next.duration}. ${next.intro}`;
 }
 
-
-/* =========================================
-   COURSE LIST
-========================================= */
-
 function renderLessons(filter=null){
 
  const list=filter
@@ -1981,11 +2634,6 @@ continueLearning.onclick=()=>{
 
 };
 
-
-/* =========================================
-   LESSON ENGINE
-========================================= */
-
 function openLesson(id){
 
  const l=lessons.find(x=>x.id===id);
@@ -2006,6 +2654,10 @@ function openLesson(id){
    <h3>${s.title}</h3>
 
    ${s.paragraphs.map(p=>`<p>${p}</p>`).join("")}
+
+   ${s.list
+    ? `<ul>${s.list.map(x=>`<li>${x}</li>`).join("")}</ul>`
+    : ""}
 
    ${s.concept
     ? `<div class="concept"><strong>Kom ihåg</strong><br>${s.concept}</div>`
@@ -2185,11 +2837,6 @@ nextLesson.onclick=()=>{
  }
 };
 
-
-/* =========================================
-   COMPLETED
-========================================= */
-
 function renderCompleted(){
 
  const done=lessons.filter(l=>completed(l.id));
@@ -2233,11 +2880,6 @@ function renderCompleted(){
  `).join("");
 }
 
-
-/* =========================================
-   DAILY
-========================================= */
-
 function updateDaily(){
 
  if(progress.daily){
@@ -2259,11 +2901,6 @@ dailyComplete.onclick=()=>{
  toastMessage("Dagens fem minuter är genomförda.");
 };
 
-
-/* =========================================
-   RISK LAB
-========================================= */
-
 const riskInputs=[
  "riskTitle",
  "objective",
@@ -2281,15 +2918,8 @@ const riskInputs=[
 ];
 
 riskInputs.forEach(id=>{
- document.getElementById(id).addEventListener(
-  "input",
-  updateRiskPreview
- );
-
- document.getElementById(id).addEventListener(
-  "change",
-  updateRiskPreview
- );
+ document.getElementById(id).addEventListener("input",updateRiskPreview);
+ document.getElementById(id).addEventListener("change",updateRiskPreview);
 });
 
 function updateRiskPreview(){
@@ -2347,7 +2977,7 @@ function updateRiskPreview(){
  }else if(residual<=5){
 
   insight=
-   "Kontrollerna verkar reducera exponeringen betydligt. Nästa fråga är om residual risk verkligen ligger inom organisationens risk appetite.";
+   "Kontrollerna verkar reducera exponeringen betydligt. Nästa fråga är om residual risk ligger inom organisationens risk appetite.";
 
  }else{
 
@@ -2586,11 +3216,6 @@ function escapeHtml(value){
   .replaceAll("'","&#039;");
 }
 
-
-/* =========================================
-   RESET
-========================================= */
-
 resetProgress.onclick=()=>{
 
  if(!confirm("Vill du nollställa din progression?")){
@@ -2612,11 +3237,6 @@ resetProgress.onclick=()=>{
  toastMessage("Progressionen har nollställts.");
 };
 
-
-/* =========================================
-   TOAST
-========================================= */
-
 function toastMessage(text){
 
  toast.textContent=text;
@@ -2629,11 +3249,6 @@ function toastMessage(text){
  },2400);
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
 openMenu.onclick=()=>{
  sidebar.classList.add("open");
 };
@@ -2641,11 +3256,6 @@ openMenu.onclick=()=>{
 closeMenu.onclick=()=>{
  sidebar.classList.remove("open");
 };
-
-
-/* =========================================
-   INITIALIZE
-========================================= */
 
 renderLessons();
 renderRisks();
