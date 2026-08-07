@@ -2,15 +2,13 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-
   <meta
     name="description"
-    content="En personlig utbildningsapp för COSO, risk management, geopolitik och internationell politik."
+    content="Atlas Academy – personlig utbildningsapp för COSO, risk management, geopolitik och internationell politik."
   />
 
   <title>Atlas Academy</title>
@@ -31,6 +29,7 @@
       --blue-soft: #e7edf3;
       --sand-soft: #f0e7d8;
       --danger-soft: #f4e4e0;
+      --success: #2e685d;
       --shadow: 0 16px 45px rgba(24, 35, 33, 0.08);
       --radius-large: 28px;
       --radius-medium: 18px;
@@ -65,7 +64,7 @@
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     button,
@@ -100,6 +99,7 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+      z-index: 20;
     }
 
     .brand {
@@ -256,7 +256,7 @@
     }
 
     .topbar-description {
-      max-width: 600px;
+      max-width: 650px;
       margin-top: 12px;
       color: var(--text-soft);
       font-size: 16px;
@@ -367,7 +367,8 @@
 
     .primary-button,
     .secondary-button,
-    .small-button {
+    .small-button,
+    .outline-button {
       border: none;
       border-radius: 12px;
       font-weight: 750;
@@ -379,7 +380,8 @@
 
     .primary-button:hover,
     .secondary-button:hover,
-    .small-button:hover {
+    .small-button:hover,
+    .outline-button:hover {
       transform: translateY(-1px);
     }
 
@@ -399,6 +401,13 @@
       color: white;
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .outline-button {
+      padding: 11px 14px;
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
 
     .dashboard-grid {
@@ -746,6 +755,248 @@
       font-size: 14px;
     }
 
+    /* LESSON VIEW */
+
+    .lesson-shell {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .lesson-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .lesson-breadcrumb {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .lesson-header {
+      padding: 34px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-header h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(31px, 5vw, 48px);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .lesson-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .lesson-intro {
+      margin-top: 18px;
+      max-width: 720px;
+      color: var(--text-soft);
+      font-size: 16px;
+    }
+
+    .lesson-section {
+      margin-top: 20px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+    }
+
+    .lesson-section h3 {
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .lesson-section p + p {
+      margin-top: 14px;
+    }
+
+    .lesson-section ul {
+      margin: 15px 0 0 22px;
+    }
+
+    .lesson-section li + li {
+      margin-top: 8px;
+    }
+
+    .concept-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-left: 4px solid var(--accent);
+      background: var(--sand-soft);
+      border-radius: 0 14px 14px 0;
+    }
+
+    .concept-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .senior-box {
+      margin-top: 20px;
+      padding: 24px;
+      background: var(--green);
+      color: white;
+      border-radius: var(--radius-medium);
+    }
+
+    .senior-box .eyebrow {
+      color: #d9bd8e;
+    }
+
+    .senior-box h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .senior-box p {
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .senior-box ul {
+      margin: 14px 0 0 20px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .senior-box li + li {
+      margin-top: 7px;
+    }
+
+    .quiz-card {
+      margin-top: 20px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+    }
+
+    .quiz-card h3 {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    .quiz-question {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .quiz-question:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .quiz-question h4 {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    .quiz-option {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      text-align: left;
+      color: var(--text);
+    }
+
+    .quiz-option:hover {
+      background: #efeee9;
+    }
+
+    .quiz-option.selected {
+      border-color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .quiz-option.correct {
+      border-color: var(--success);
+      background: #e1efea;
+    }
+
+    .quiz-option.wrong {
+      border-color: #a96455;
+      background: var(--danger-soft);
+    }
+
+    .quiz-feedback {
+      display: none;
+      margin-top: 12px;
+      padding: 13px 14px;
+      border-radius: 11px;
+      background: var(--surface-soft);
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .quiz-feedback.visible {
+      display: block;
+    }
+
+    .quiz-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .quiz-result {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: var(--green-soft);
+    }
+
+    .quiz-result.visible {
+      display: block;
+    }
+
+    .quiz-result h4 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .lesson-footer-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
     .mobile-menu-button {
       display: none;
       position: fixed;
@@ -882,6 +1133,25 @@
         grid-column: 2;
         width: fit-content;
       }
+
+      .lesson-header,
+      .lesson-section,
+      .quiz-card {
+        padding: 22px;
+      }
+
+      .lesson-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lesson-footer-actions {
+        flex-direction: column;
+      }
+
+      .lesson-footer-actions button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -943,12 +1213,14 @@
     </aside>
 
     <main class="main-content">
+      <!-- DASHBOARD -->
+
       <section class="page active" id="dashboard">
         <header class="topbar">
           <div>
             <div class="eyebrow">Din personliga utbildning</div>
 
-            <h2>God kväll, Angelina.</h2>
+            <h2>God morgon, Angelina.</h2>
 
             <p class="topbar-description">
               Bygg senior kompetens inom risk management och
@@ -1192,6 +1464,8 @@
         </section>
       </section>
 
+      <!-- COURSES -->
+
       <section class="page" id="courses">
         <header class="topbar">
           <div>
@@ -1207,6 +1481,8 @@
 
         <div class="lesson-list" id="lessonList"></div>
       </section>
+
+      <!-- DAILY -->
 
       <section class="page" id="daily">
         <header class="topbar">
@@ -1242,6 +1518,8 @@
         </section>
       </section>
 
+      <!-- RISK LAB -->
+
       <section class="page" id="risklab">
         <header class="topbar">
           <div>
@@ -1265,6 +1543,8 @@
           </p>
         </div>
       </section>
+
+      <!-- PROGRESS -->
 
       <section class="page" id="progress">
         <header class="topbar">
@@ -1319,6 +1599,114 @@
           </section>
         </div>
       </section>
+
+      <!-- LESSON PAGE -->
+
+      <section class="page" id="lessonPage">
+        <div class="lesson-shell">
+          <div class="lesson-top">
+            <button
+              class="outline-button"
+              id="backToCoursesButton"
+            >
+              ← Tillbaka till kurser
+            </button>
+
+            <div
+              class="lesson-breadcrumb"
+              id="lessonBreadcrumb"
+            ></div>
+          </div>
+
+          <article class="lesson-header">
+            <div
+              class="eyebrow"
+              id="lessonCourseName"
+            ></div>
+
+            <h2 id="lessonTitle"></h2>
+
+            <p
+              class="lesson-intro"
+              id="lessonIntro"
+            ></p>
+
+            <div class="lesson-meta">
+              <span
+                class="pill"
+                id="lessonDuration"
+              ></span>
+
+              <span
+                class="pill"
+                id="lessonLevel"
+              ></span>
+
+              <span class="pill">
+                Atlas Academy
+              </span>
+            </div>
+          </article>
+
+          <div id="lessonContent"></div>
+
+          <section
+            class="senior-box"
+            id="seniorBox"
+          >
+            <div class="eyebrow">Senior perspective</div>
+
+            <h3>Så här tänker en erfaren rådgivare</h3>
+
+            <div id="seniorPerspective"></div>
+          </section>
+
+          <section class="quiz-card">
+            <div class="eyebrow">Knowledge check</div>
+
+            <h3>Testa vad du har förstått</h3>
+
+            <div id="quizContainer"></div>
+
+            <div class="quiz-actions">
+              <button
+                class="primary-button"
+                id="submitQuizButton"
+              >
+                Rätta quiz
+              </button>
+
+              <button
+                class="outline-button"
+                id="resetQuizButton"
+              >
+                Börja om
+              </button>
+            </div>
+
+            <div
+              class="quiz-result"
+              id="quizResult"
+            ></div>
+          </section>
+
+          <div class="lesson-footer-actions">
+            <button
+              class="outline-button"
+              id="previousLessonButton"
+            >
+              ← Föregående lektion
+            </button>
+
+            <button
+              class="primary-button"
+              id="nextLessonButton"
+            >
+              Nästa lektion →
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 
@@ -1341,8 +1729,90 @@
         title: "Vad är risk?",
         description:
           "Skillnaden mellan risk, osäkerhet, incident och problem.",
-        duration: "10 min"
+        duration: "10 min",
+        level: "Foundation",
+        intro:
+          "För att bli riktigt bra på risk management måste du först förstå vad risk faktiskt är. Det låter självklart, men det är här många organisationer börjar fel.",
+        sections: [
+          {
+            title: "Risk börjar alltid med ett mål",
+            paragraphs: [
+              "Risk kan inte förstås i ett vakuum. Det måste alltid finnas ett mål som kan påverkas. Om en organisation vill växa på en ny marknad uppstår osäkerheter kring exempelvis efterfrågan, reglering, konkurrens och leveransförmåga.",
+              "Det innebär att samma händelse kan vara en stor risk för en organisation och nästan irrelevant för en annan, beroende på vilka mål de försöker uppnå."
+            ],
+            concept:
+              "En användbar arbetsdefinition är: Risk är osäkerhet som kan påverka möjligheten att nå ett mål."
+          },
+          {
+            title: "Risk är inte samma sak som ett problem",
+            paragraphs: [
+              "Ett problem eller en incident har redan inträffat. Risk handlar om osäkerheten kring vad som kan inträffa framåt.",
+              "Om ett företag redan har drabbats av ett dataintrång är själva intrånget en incident. Risken kan däremot vara att otillräcklig åtkomststyrning leder till nya intrång med regulatoriska och kommersiella konsekvenser."
+            ],
+            list: [
+              "Risk: något osäkert som kan påverka ett mål.",
+              "Incident: något som redan har inträffat.",
+              "Orsak: det som kan ge upphov till riskhändelsen.",
+              "Konsekvens: effekten om riskhändelsen inträffar."
+            ]
+          },
+          {
+            title: "Risk är inte bara negativt",
+            paragraphs: [
+              "I modern enterprise risk management är risk nära kopplat till beslutsfattande. Organisationer måste ta risk för att kunna skapa värde.",
+              "Ett bolag som vill lansera en ny produkt utsätter sig för kommersiell osäkerhet, men utan den risken finns kanske heller ingen möjlighet till tillväxt."
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Fråga alltid först: Vilket mål försöker verksamheten uppnå?",
+          "Be någon beskriva risken som ett scenario, inte bara som ett ämnesord.",
+          "Om någon säger 'cyber är vår största risk', fråga vad de faktiskt tror kan hända och hur det påverkar verksamheten.",
+          "Separera noggrant orsak, riskhändelse och konsekvens."
+        ],
+        quiz: [
+          {
+            question:
+              "Vilket av följande beskriver bäst en risk?",
+            options: [
+              "En incident som redan inträffat",
+              "Osäkerhet som kan påverka ett mål",
+              "En policy som saknas",
+              "En finansiell förlust"
+            ],
+            correct: 1,
+            explanation:
+              "Risk handlar om osäkerhet i relation till ett mål. En incident eller förlust kan vara resultatet av att en risk materialiserats."
+          },
+          {
+            question:
+              "Ett företag har redan haft ett dataintrång. Vad är intrånget?",
+            options: [
+              "En risk",
+              "En risk appetite",
+              "En incident",
+              "En kontroll"
+            ],
+            correct: 2,
+            explanation:
+              "Något som redan har inträffat är en incident. Riskformuleringen ska vara framåtblickande."
+          },
+          {
+            question:
+              "Varför måste risk kopplas till mål?",
+            options: [
+              "För att alla risker annars blir finansiella",
+              "För att bedöma vad osäkerheten faktiskt kan påverka",
+              "För att styrelsen alltid kräver det",
+              "För att risk bara gäller strategi"
+            ],
+            correct: 1,
+            explanation:
+              "Utan ett mål går det inte att avgöra varför en osäkerhet är relevant eller hur allvarlig den är."
+          }
+        ]
       },
+
       {
         id: "risk-2",
         course: "risk",
@@ -1350,8 +1820,71 @@
         title: "Riskens anatomi",
         description:
           "Lär dig formulera orsak, riskhändelse och konsekvens.",
-        duration: "10 min"
+        duration: "10 min",
+        level: "Foundation",
+        intro:
+          "En professionell riskformulering gör det möjligt att förstå vad som driver risken, vad som kan inträffa och varför det spelar roll.",
+        sections: [
+          {
+            title: "Tre delar",
+            paragraphs: [
+              "En praktiskt användbar riskformulering består ofta av tre delar: orsak, riskhändelse och konsekvens.",
+              "Formeln är enkel men kraftfull: På grund av X finns en risk att Y inträffar, vilket kan leda till Z."
+            ],
+            concept:
+              "Orsak → riskhändelse → konsekvens."
+          },
+          {
+            title: "Exempel",
+            paragraphs: [
+              "På grund av bristande datastyrning finns en risk att ESG-data rapporteras felaktigt, vilket kan leda till regulatoriska överträdelser, felaktiga beslut och förtroendeskada.",
+              "Notera att 'bristande datastyrning' är orsaken. 'Felaktig rapportering' är riskhändelsen. Böter, felaktiga beslut och reputationsskada är möjliga konsekvenser."
+            ]
+          },
+          {
+            title: "Undvik vaga risker",
+            paragraphs: [
+              "Rubriker som 'GDPR-risk', 'cyberrisk' eller 'leverantörsrisk' är för breda för att styra beslut.",
+              "En bra risk ska vara tillräckligt specifik för att någon ska förstå vad som måste kontrolleras eller förändras."
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Om en risk inte går att förklara utan ett buzzword är den ofta för vag.",
+          "Fråga vad som faktiskt kan inträffa, inte bara vilket område risken tillhör.",
+          "En konsekvens ska kopplas tillbaka till verksamhetsmålet.",
+          "Bra riskformuleringar gör det mycket enklare att designa relevanta kontroller."
+        ],
+        quiz: [
+          {
+            question:
+              "Vilken struktur är mest användbar för en riskformulering?",
+            options: [
+              "Kontroll → problem → budget",
+              "Orsak → riskhändelse → konsekvens",
+              "Incident → sannolikhet → policy",
+              "Mål → kontroll → incident"
+            ],
+            correct: 1,
+            explanation:
+              "Den strukturen visar både drivkraft, händelse och affärspåverkan."
+          },
+          {
+            question:
+              "I formuleringen 'På grund av svag behörighetsstyrning finns risk för obehörig åtkomst', vad är orsaken?",
+            options: [
+              "Obehörig åtkomst",
+              "Svag behörighetsstyrning",
+              "Dataläckage",
+              "Regulatorisk påverkan"
+            ],
+            correct: 1,
+            explanation:
+              "Svag behörighetsstyrning är det bakomliggande förhållandet som driver risken."
+          }
+        ]
       },
+
       {
         id: "politics-1",
         course: "politics",
@@ -1359,8 +1892,79 @@
         title: "Makt, stat och suveränitet",
         description:
           "Grundbegreppen som behövs för att förstå världspolitik.",
-        duration: "10 min"
+        duration: "10 min",
+        level: "University foundation",
+        intro:
+          "Internationell politik börjar med några få centrala begrepp: staten, suveränitet och makt. Utan dem blir det svårt att förstå varför världspolitiken fungerar så annorlunda än inrikespolitik.",
+        sections: [
+          {
+            title: "Vad är en stat?",
+            paragraphs: [
+              "En stat är en politisk organisation med territorium, befolkning, institutioner och anspråk på legitim auktoritet inom sitt område.",
+              "Det är viktigt att skilja mellan stat och regering. Regeringar byts ut. Staten består."
+            ]
+          },
+          {
+            title: "Suveränitet",
+            paragraphs: [
+              "Suveränitet betyder i förenklad form att staten har högsta politiska auktoritet inom sitt territorium och formellt erkänns som självständig gentemot andra stater.",
+              "I praktiken kan suveränitet vara begränsad av ekonomi, säkerhetsberoenden, internationell rätt och organisationer."
+            ],
+            concept:
+              "Stat ≠ regering. Staten är den politiska strukturen; regeringen är den ledning som för tillfället styr."
+          },
+          {
+            title: "Makt",
+            paragraphs: [
+              "Makt är förmågan att påverka andra aktörers beteende eller utfall.",
+              "Militär kapacitet är en form av makt, men ekonomisk styrka, teknologi, institutioner, diplomati, normer och attraktivitet kan också ge inflytande."
+            ],
+            list: [
+              "Militär makt",
+              "Ekonomisk makt",
+              "Institutionell makt",
+              "Teknologisk makt",
+              "Diplomatisk makt",
+              "Normativ och kulturell makt"
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Analysera aldrig ett land bara utifrån vem som är president eller premiärminister.",
+          "Fråga vilka institutioner som faktiskt begränsar eller förstärker ledningens handlingsutrymme.",
+          "Skilj mellan formell makt och faktisk kapacitet.",
+          "I geopolitisk riskanalys är ekonomiska och teknologiska beroenden ofta lika viktiga som militär styrka."
+        ],
+        quiz: [
+          {
+            question:
+              "Vad är den viktigaste skillnaden mellan stat och regering?",
+            options: [
+              "Det finns ingen skillnad",
+              "Regeringen är permanent medan staten byts ut",
+              "Staten är den övergripande politiska strukturen medan regeringen är den tillfälliga ledningen",
+              "Staten gäller bara demokratier"
+            ],
+            correct: 2,
+            explanation:
+              "Regeringar kan bytas efter val eller maktskiften medan staten som institutionell struktur består."
+          },
+          {
+            question:
+              "Vilket av följande kan vara en form av makt i internationell politik?",
+            options: [
+              "Endast militära resurser",
+              "Endast ekonomisk storlek",
+              "Militär, ekonomi, teknologi, institutioner och normer",
+              "Endast territoriell storlek"
+            ],
+            correct: 2,
+            explanation:
+              "Internationell makt är multidimensionell och kan komma från flera typer av resurser."
+          }
+        ]
       },
+
       {
         id: "politics-2",
         course: "politics",
@@ -1368,8 +1972,71 @@
         title: "Det internationella systemet",
         description:
           "Varför internationell politik beskrivs som ett anarkiskt system.",
-        duration: "12 min"
+        duration: "12 min",
+        level: "University foundation",
+        intro:
+          "En central idé inom internationella relationer är att det internationella systemet är anarkiskt. Det betyder inte kaos, utan att det saknas en överordnad global regering med slutgiltig makt över stater.",
+        sections: [
+          {
+            title: "Anarki betyder inte kaos",
+            paragraphs: [
+              "Inom internationella relationer används ordet anarki för att beskriva frånvaron av en världsregering som kan garantera staters säkerhet.",
+              "Stater måste därför i hög grad själva ansvara för sin säkerhet och överlevnad."
+            ]
+          },
+          {
+            title: "Säkerhetsdilemmat",
+            paragraphs: [
+              "När en stat stärker sitt försvar för att känna sig säkrare kan andra stater uppleva det som hotfullt och svara genom att själva rusta upp.",
+              "Resultatet kan bli att alla aktörer känner sig mindre säkra trots att ingen ursprungligen ville starta en konflikt."
+            ],
+            concept:
+              "Åtgärder som är defensiva ur ett lands perspektiv kan uppfattas som offensiva av andra."
+          },
+          {
+            title: "Samarbete är ändå möjligt",
+            paragraphs: [
+              "Trots anarkin samarbetar stater genom handel, avtal, internationell rätt och institutioner.",
+              "En av huvudfrågorna inom internationella relationer är därför varför samarbete ibland fungerar och ibland bryter samman."
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Fråga hur varje aktör ser på situationen, inte bara vad du själv tycker är rationellt.",
+          "Säkerhetsdilemmat hjälper till att förklara varför defensiva åtgärder kan skapa eskalering.",
+          "Institutioner minskar osäkerhet men eliminerar inte maktpolitik.",
+          "För företag är detta viktigt eftersom säkerhetspolitisk eskalering snabbt kan påverka handel, sanktioner och leverantörskedjor."
+        ],
+        quiz: [
+          {
+            question:
+              "Vad betyder anarki inom internationella relationer?",
+            options: [
+              "Att världen alltid befinner sig i kaos",
+              "Att stater saknar lagar",
+              "Att det saknas en överordnad global regering över stater",
+              "Att endast stormakter har makt"
+            ],
+            correct: 2,
+            explanation:
+              "Anarki beskriver systemets struktur, inte ett tillstånd av kaos."
+          },
+          {
+            question:
+              "Vad beskriver säkerhetsdilemmat?",
+            options: [
+              "När stater inte har några militära resurser",
+              "När en stats försvarsåtgärder gör andra stater mer oroliga",
+              "När företag bryter mot sanktioner",
+              "När FN inte kan fatta beslut"
+            ],
+            correct: 1,
+            explanation:
+              "Säkerhetsdilemmat uppstår när åtgärder för egen säkerhet skapar osäkerhet hos andra."
+          }
+        ]
       },
+
       {
         id: "geopolitics-1",
         course: "geopolitics",
@@ -1377,8 +2044,71 @@
         title: "Från världshändelse till företagsrisk",
         description:
           "Så översätter du politisk förändring till affärspåverkan.",
-        duration: "12 min"
+        duration: "12 min",
+        level: "Professional",
+        intro:
+          "Geopolitik blir relevant för företag först när vi kan översätta en politisk utveckling till en konkret exponering, ett scenario och ett affärsbeslut.",
+        sections: [
+          {
+            title: "Nyhet är inte samma sak som risk",
+            paragraphs: [
+              "Att ett val, ett krig eller en diplomatisk konflikt har inträffat betyder inte automatiskt att det är en materiell risk för ditt företag.",
+              "Du behöver förstå hur händelsen påverkar företagets mål, marknader, leverantörer, investeringar eller regulatoriska position."
+            ]
+          },
+          {
+            title: "Bygg en påverkningskedja",
+            paragraphs: [
+              "En enkel metod är att börja med den geopolitiska utvecklingen och sedan följa kedjan fram till verksamheten.",
+              "Exempel: ökade spänningar mellan två länder → exportkontroller → brist på kritiska komponenter → förseningar i produktion → lägre försäljning."
+            ],
+            concept:
+              "Geopolitisk händelse → policy eller marknadseffekt → företagsexponering → affärskonsekvens."
+          },
+          {
+            title: "Tänk i scenarier",
+            paragraphs: [
+              "Det centrala är sällan att förutsäga exakt vad som kommer att hända.",
+              "Det viktiga är att förstå flera plausibla utvecklingar och vad företaget skulle göra i respektive scenario."
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Börja aldrig med rubriken i tidningen. Börja med företagets exponering.",
+          "Fråga vilka beslut som måste fattas om utvecklingen eskalerar.",
+          "Identifiera tidiga indikatorer som visar vilket scenario världen rör sig mot.",
+          "Separera sannolikhet från konsekvens. En låg sannolikhet kan fortfarande kräva beredskap om påverkan är extrem."
+        ],
+        quiz: [
+          {
+            question:
+              "Vad är första steget när du analyserar geopolitisk risk för ett företag?",
+            options: [
+              "Bedöma vilken politiker som verkar mest trovärdig",
+              "Koppla utvecklingen till företagets exponering och mål",
+              "Skriva en lista över alla nyheter",
+              "Utgå från att konflikten eskalerar"
+            ],
+            correct: 1,
+            explanation:
+              "Geopolitisk analys blir relevant först när den kopplas till företagets faktiska exponering."
+          },
+          {
+            question:
+              "Vilken kedja är mest användbar?",
+            options: [
+              "Nyhet → åsikt → rapport",
+              "Politisk utveckling → effekt → företagsexponering → affärskonsekvens",
+              "Ledare → regering → press",
+              "Risk → policy → mål → orsak"
+            ],
+            correct: 1,
+            explanation:
+              "Den kedjan hjälper dig att översätta omvärldsutveckling till beslutbar företagsrisk."
+          }
+        ]
       },
+
       {
         id: "geopolitics-2",
         course: "geopolitics",
@@ -1386,11 +2116,76 @@
         title: "Aktörer, intressen och makt",
         description:
           "En enkel modell för att analysera geopolitiska situationer.",
-        duration: "14 min"
+        duration: "14 min",
+        level: "Professional",
+        intro:
+          "När du analyserar en geopolitisk situation behöver du förstå vilka aktörerna är, vad de vill uppnå, vilka resurser de har och vilka begränsningar de möter.",
+        sections: [
+          {
+            title: "Identifiera aktörerna",
+            paragraphs: [
+              "Aktörer kan vara stater, regeringar, militärer, internationella organisationer, företag, politiska rörelser eller andra grupper.",
+              "Undvik att behandla ett helt land som en enda aktör om interna institutioner och grupper drar åt olika håll."
+            ]
+          },
+          {
+            title: "Intressen före retorik",
+            paragraphs: [
+              "Politiska ledare säger ofta många saker offentligt. Din uppgift är att förstå vilka underliggande intressen som driver deras handlande.",
+              "Det kan handla om säkerhet, ekonomisk tillväxt, regimöverlevnad, territoriell kontroll, prestige eller ideologi."
+            ],
+            concept:
+              "Aktör → intresse → resurser → begränsningar → sannolika handlingsalternativ."
+          },
+          {
+            title: "Kapacitet sätter gränser",
+            paragraphs: [
+              "En aktör kan vilja mycket men sakna militär, ekonomisk eller politisk kapacitet att genomföra det.",
+              "God analys kräver därför att du skiljer mellan ambition och förmåga."
+            ]
+          }
+        ],
+        seniorPerspective: [
+          "Fråga vad varje aktör behöver uppnå för att kunna kalla utfallet acceptabelt.",
+          "Titta på både materiell kapacitet och politiska begränsningar.",
+          "Identifiera vilka aktörer som har vetorätt eller möjlighet att skapa kostnader för andra.",
+          "För företag: koppla sedan varje aktörs möjliga agerande till konkreta riskexponeringar."
+        ],
+        quiz: [
+          {
+            question:
+              "Vilken fråga är mest central i aktörsanalys?",
+            options: [
+              "Vilken ledare är mest populär?",
+              "Vad vill aktören uppnå och vilka resurser har den?",
+              "Vilket land har störst befolkning?",
+              "Vilken nyhet är senast publicerad?"
+            ],
+            correct: 1,
+            explanation:
+              "Intressen och kapacitet är centrala för att bedöma sannolika handlingsalternativ."
+          },
+          {
+            question:
+              "Varför bör man skilja mellan ambition och kapacitet?",
+            options: [
+              "För att alla aktörer alltid överdriver",
+              "För att en aktör kan vilja något utan att kunna genomföra det",
+              "För att militär styrka alltid är oviktig",
+              "För att ekonomiska resurser saknar betydelse"
+            ],
+            correct: 1,
+            explanation:
+              "Politiska mål säger inte automatiskt något om faktisk handlingsförmåga."
+          }
+        ]
       }
     ];
 
     const storageKey = "atlasAcademyProgress";
+
+    let activeLessonId = null;
+    let selectedAnswers = {};
 
     function getStoredProgress() {
       try {
@@ -1399,7 +2194,8 @@
         if (!storedValue) {
           return {
             completedLessons: [],
-            dailyCompleted: false
+            dailyCompleted: false,
+            quizScores: {}
           };
         }
 
@@ -1409,14 +2205,20 @@
           completedLessons: Array.isArray(parsedValue.completedLessons)
             ? parsedValue.completedLessons
             : [],
-          dailyCompleted: Boolean(parsedValue.dailyCompleted)
+          dailyCompleted: Boolean(parsedValue.dailyCompleted),
+          quizScores:
+            parsedValue.quizScores &&
+            typeof parsedValue.quizScores === "object"
+              ? parsedValue.quizScores
+              : {}
         };
       } catch (error) {
         console.error("Kunde inte läsa sparad progression:", error);
 
         return {
           completedLessons: [],
-          dailyCompleted: false
+          dailyCompleted: false,
+          quizScores: {}
         };
       }
     }
@@ -1436,17 +2238,9 @@
       return progress.completedLessons.includes(lessonId);
     }
 
-    function toggleLesson(lessonId) {
-      if (isLessonCompleted(lessonId)) {
-        progress.completedLessons =
-          progress.completedLessons.filter(
-            completedId => completedId !== lessonId
-          );
-
-        showToast("Lektionen markerades som inte genomförd.");
-      } else {
+    function markLessonCompleted(lessonId) {
+      if (!isLessonCompleted(lessonId)) {
         progress.completedLessons.push(lessonId);
-        showToast("Bra jobbat! Lektionen är genomförd.");
       }
 
       saveProgress();
@@ -1505,9 +2299,9 @@
 
               <button
                 class="lesson-action"
-                data-lesson-id="${lesson.id}"
+                data-open-lesson="${lesson.id}"
               >
-                ${completed ? "Markera som ej klar" : "Markera som klar"}
+                ${completed ? "Öppna igen" : "Starta lektion"}
               </button>
             </article>
           `;
@@ -1515,10 +2309,10 @@
         .join("");
 
       document
-        .querySelectorAll("[data-lesson-id]")
+        .querySelectorAll("[data-open-lesson]")
         .forEach(button => {
           button.addEventListener("click", () => {
-            toggleLesson(button.dataset.lessonId);
+            openLesson(button.dataset.openLesson);
           });
         });
     }
@@ -1536,7 +2330,7 @@
 
       if (completedLessons.length === 0) {
         summary.textContent =
-          "Du har ännu inte markerat någon lektion som klar.";
+          "Du har ännu inte genomfört någon lektion.";
 
         completedLessonList.innerHTML = `
           <div class="empty-state">
@@ -1557,6 +2351,8 @@
 
       completedLessonList.innerHTML = completedLessons
         .map(lesson => {
+          const score = progress.quizScores[lesson.id];
+
           return `
             <article class="lesson-item completed">
               <div class="lesson-number">✓</div>
@@ -1568,12 +2364,34 @@
 
                 <h3>${lesson.title}</h3>
 
-                <p>${lesson.duration}</p>
+                <p>
+                  ${lesson.duration}
+                  ${
+                    score !== undefined
+                      ? ` · Quiz: ${score}%`
+                      : ""
+                  }
+                </p>
               </div>
+
+              <button
+                class="lesson-action"
+                data-open-completed="${lesson.id}"
+              >
+                Öppna
+              </button>
             </article>
           `;
         })
         .join("");
+
+      document
+        .querySelectorAll("[data-open-completed]")
+        .forEach(button => {
+          button.addEventListener("click", () => {
+            openLesson(button.dataset.openCompleted);
+          });
+        });
     }
 
     function updateProgressDisplays() {
@@ -1678,14 +2496,14 @@
       if (firstCourseLesson) {
         window.setTimeout(() => {
           const lessonButton = document.querySelector(
-            `[data-lesson-id="${firstCourseLesson.id}"]`
+            `[data-open-lesson="${firstCourseLesson.id}"]`
           );
 
           lessonButton?.closest(".lesson-item")?.scrollIntoView({
             behavior: "smooth",
             block: "center"
           });
-        }, 100);
+        }, 120);
       }
     }
 
@@ -1701,6 +2519,347 @@
         button.textContent = "Markera som genomfört";
         button.disabled = false;
         button.style.opacity = "1";
+      }
+    }
+
+    function getLessonById(lessonId) {
+      return lessons.find(lesson => lesson.id === lessonId);
+    }
+
+    function openLesson(lessonId) {
+      const lesson = getLessonById(lessonId);
+
+      if (!lesson) {
+        return;
+      }
+
+      activeLessonId = lessonId;
+      selectedAnswers = {};
+
+      document.getElementById(
+        "lessonBreadcrumb"
+      ).textContent = lesson.courseName;
+
+      document.getElementById(
+        "lessonCourseName"
+      ).textContent = lesson.courseName;
+
+      document.getElementById(
+        "lessonTitle"
+      ).textContent = lesson.title;
+
+      document.getElementById(
+        "lessonIntro"
+      ).textContent = lesson.intro;
+
+      document.getElementById(
+        "lessonDuration"
+      ).textContent = lesson.duration;
+
+      document.getElementById(
+        "lessonLevel"
+      ).textContent = lesson.level;
+
+      renderLessonContent(lesson);
+      renderSeniorPerspective(lesson);
+      renderQuiz(lesson);
+      updateLessonNavigation(lesson);
+
+      showPage("lessonPage");
+    }
+
+    function renderLessonContent(lesson) {
+      const contentContainer =
+        document.getElementById("lessonContent");
+
+      contentContainer.innerHTML = lesson.sections
+        .map(section => {
+          const paragraphs = section.paragraphs
+            .map(paragraph => `<p>${paragraph}</p>`)
+            .join("");
+
+          const list = section.list
+            ? `
+              <ul>
+                ${section.list
+                  .map(item => `<li>${item}</li>`)
+                  .join("")}
+              </ul>
+            `
+            : "";
+
+          const concept = section.concept
+            ? `
+              <div class="concept-box">
+                <strong>Kom ihåg</strong>
+                ${section.concept}
+              </div>
+            `
+            : "";
+
+          return `
+            <section class="lesson-section">
+              <h3>${section.title}</h3>
+              ${paragraphs}
+              ${list}
+              ${concept}
+            </section>
+          `;
+        })
+        .join("");
+    }
+
+    function renderSeniorPerspective(lesson) {
+      const container =
+        document.getElementById("seniorPerspective");
+
+      container.innerHTML = `
+        <p>
+          När du använder detta i verkligheten, tänk särskilt på:
+        </p>
+
+        <ul>
+          ${lesson.seniorPerspective
+            .map(item => `<li>${item}</li>`)
+            .join("")}
+        </ul>
+      `;
+    }
+
+    function renderQuiz(lesson) {
+      const quizContainer =
+        document.getElementById("quizContainer");
+
+      quizContainer.innerHTML = lesson.quiz
+        .map((question, questionIndex) => {
+          const options = question.options
+            .map((option, optionIndex) => {
+              return `
+                <button
+                  class="quiz-option"
+                  data-question-index="${questionIndex}"
+                  data-option-index="${optionIndex}"
+                >
+                  ${option}
+                </button>
+              `;
+            })
+            .join("");
+
+          return `
+            <div
+              class="quiz-question"
+              data-question-wrapper="${questionIndex}"
+            >
+              <h4>
+                ${questionIndex + 1}. ${question.question}
+              </h4>
+
+              <div class="quiz-options">
+                ${options}
+              </div>
+
+              <div
+                class="quiz-feedback"
+                id="feedback-${questionIndex}"
+              ></div>
+            </div>
+          `;
+        })
+        .join("");
+
+      document
+        .querySelectorAll(".quiz-option")
+        .forEach(button => {
+          button.addEventListener("click", () => {
+            const questionIndex = Number(
+              button.dataset.questionIndex
+            );
+
+            const optionIndex = Number(
+              button.dataset.optionIndex
+            );
+
+            selectedAnswers[questionIndex] = optionIndex;
+
+            document
+              .querySelectorAll(
+                `[data-question-index="${questionIndex}"]`
+              )
+              .forEach(optionButton => {
+                optionButton.classList.remove("selected");
+              });
+
+            button.classList.add("selected");
+          });
+        });
+
+      const result =
+        document.getElementById("quizResult");
+
+      result.classList.remove("visible");
+      result.innerHTML = "";
+    }
+
+    function submitQuiz() {
+      const lesson = getLessonById(activeLessonId);
+
+      if (!lesson) {
+        return;
+      }
+
+      const unansweredQuestions = lesson.quiz.filter(
+        (_, index) => selectedAnswers[index] === undefined
+      );
+
+      if (unansweredQuestions.length > 0) {
+        showToast("Svara på alla frågor först.");
+        return;
+      }
+
+      let correctAnswers = 0;
+
+      lesson.quiz.forEach((question, questionIndex) => {
+        const selectedIndex =
+          selectedAnswers[questionIndex];
+
+        const feedback =
+          document.getElementById(
+            `feedback-${questionIndex}`
+          );
+
+        const optionButtons =
+          document.querySelectorAll(
+            `[data-question-index="${questionIndex}"]`
+          );
+
+        optionButtons.forEach((button, optionIndex) => {
+          button.classList.remove(
+            "selected",
+            "correct",
+            "wrong"
+          );
+
+          if (optionIndex === question.correct) {
+            button.classList.add("correct");
+          }
+
+          if (
+            optionIndex === selectedIndex &&
+            selectedIndex !== question.correct
+          ) {
+            button.classList.add("wrong");
+          }
+        });
+
+        if (selectedIndex === question.correct) {
+          correctAnswers += 1;
+
+          feedback.innerHTML = `
+            <strong>Rätt.</strong>
+            ${question.explanation}
+          `;
+        } else {
+          feedback.innerHTML = `
+            <strong>Inte riktigt.</strong>
+            ${question.explanation}
+          `;
+        }
+
+        feedback.classList.add("visible");
+      });
+
+      const score = calculatePercentage(
+        correctAnswers,
+        lesson.quiz.length
+      );
+
+      progress.quizScores[lesson.id] = score;
+      markLessonCompleted(lesson.id);
+
+      const result =
+        document.getElementById("quizResult");
+
+      let resultMessage = "";
+
+      if (score === 100) {
+        resultMessage =
+          "Perfekt. Du har grepp om kärnan i lektionen.";
+      } else if (score >= 70) {
+        resultMessage =
+          "Bra. Du har förstått huvuddelen och kan gå vidare.";
+      } else {
+        resultMessage =
+          "Du har en bra början. Läs gärna igenom förklaringarna en gång till innan du går vidare.";
+      }
+
+      result.innerHTML = `
+        <h4>${score}% rätt</h4>
+
+        <p style="margin-top: 7px; color: var(--text-soft);">
+          ${resultMessage}
+        </p>
+      `;
+
+      result.classList.add("visible");
+
+      showToast("Lektionen är sparad som genomförd.");
+    }
+
+    function resetQuiz() {
+      if (!activeLessonId) {
+        return;
+      }
+
+      const lesson = getLessonById(activeLessonId);
+      selectedAnswers = {};
+      renderQuiz(lesson);
+    }
+
+    function updateLessonNavigation(lesson) {
+      const index = lessons.findIndex(
+        item => item.id === lesson.id
+      );
+
+      const previousButton =
+        document.getElementById(
+          "previousLessonButton"
+        );
+
+      const nextButton =
+        document.getElementById(
+          "nextLessonButton"
+        );
+
+      previousButton.disabled = index === 0;
+      previousButton.style.opacity =
+        index === 0 ? "0.45" : "1";
+
+      nextButton.textContent =
+        index === lessons.length - 1
+          ? "Till progression →"
+          : "Nästa lektion →";
+    }
+
+    function goToPreviousLesson() {
+      const index = lessons.findIndex(
+        lesson => lesson.id === activeLessonId
+      );
+
+      if (index > 0) {
+        openLesson(lessons[index - 1].id);
+      }
+    }
+
+    function goToNextLesson() {
+      const index = lessons.findIndex(
+        lesson => lesson.id === activeLessonId
+      );
+
+      if (index < lessons.length - 1) {
+        openLesson(lessons[index + 1].id);
+      } else {
+        showPage("progress");
       }
     }
 
@@ -1744,7 +2903,7 @@
           return;
         }
 
-        openCourse(firstIncompleteLesson.course);
+        openLesson(firstIncompleteLesson.id);
       });
 
     document
@@ -1769,7 +2928,8 @@
 
         progress = {
           completedLessons: [],
-          dailyCompleted: false
+          dailyCompleted: false,
+          quizScores: {}
         };
 
         saveProgress();
@@ -1780,14 +2940,46 @@
     document
       .getElementById("openMenuButton")
       .addEventListener("click", () => {
-        document.getElementById("sidebar").classList.add("open");
+        document
+          .getElementById("sidebar")
+          .classList.add("open");
       });
 
     document
       .getElementById("closeMenuButton")
       .addEventListener("click", () => {
-        document.getElementById("sidebar").classList.remove("open");
+        document
+          .getElementById("sidebar")
+          .classList.remove("open");
       });
+
+    document
+      .getElementById("backToCoursesButton")
+      .addEventListener("click", () => {
+        showPage("courses");
+      });
+
+    document
+      .getElementById("submitQuizButton")
+      .addEventListener("click", submitQuiz);
+
+    document
+      .getElementById("resetQuizButton")
+      .addEventListener("click", resetQuiz);
+
+    document
+      .getElementById("previousLessonButton")
+      .addEventListener(
+        "click",
+        goToPreviousLesson
+      );
+
+    document
+      .getElementById("nextLessonButton")
+      .addEventListener(
+        "click",
+        goToNextLesson
+      );
 
     renderEverything();
   </script>
